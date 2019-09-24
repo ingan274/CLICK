@@ -3,31 +3,45 @@
 }); --}}
 
 <form class="form-inline">
-    <label class="sr-only" for="inlineFormInputName2">Name</label>
-    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+    <label for="gender">Gender</label>
+    <select class="form-control" id="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Transgender</option>
+        <option>Other</option>
+    </select>
 
-    <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-    <div class="input-group mb-2 mr-sm-2">
-        <div class="input-group-prepend">
-            <div class="input-group-text">@</div>
-        </div>
-        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
-    </div>
+    <label for="gender">Age</label>
+    <input type="text" class="form-control" id="minAge" placeholder="Minimum Age">
+    <input type="text" class="form-control" id="maxAge" placeholder="Maximum Age">
 
-    <div class="form-check mb-2 mr-sm-2">
-        <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-        <label class="form-check-label" for="inlineFormCheck">
-            Remember me
-        </label>
-    </div>
+    <label for="gender">Height</label>
+    <input type="text" class="form-control" id="minFt" placeholder="Minimum Height (ft)">
+    <input type="text" class="form-control" id="minInch" placeholder="(inch)">
+    <input type="text" class="form-control" id="maxFt" placeholder="Maxium Height (ft)">
+    <input type="text" class="form-control" id="maxInch" placeholder="(inch)">
 
-    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    <label for="location">Location</label>
+    <select class="form-control" id="location">
+        {{#each location}}
+        <option>{{dataValues.location}}, {{dataValues.city}}</option>
+        {{/each}}
+    </select>
+
+     <label for="Drink">Drink Frequency</label>
+    <select class="form-control" id="location">
+        {{#each drinks}}
+        <option>{{dataValues.drink}}</option>
+        {{/each}}
+    </select>
+
+    <button type="submit" class="btn btn-primary mb-2">CLICK</button>
 </form>
 
 <section class="container-fluid">
     <div class="results">
         {{#each results}}
-            {{> results}}
+        {{> results}}
         {{/each}}
     </div>
 </section>
