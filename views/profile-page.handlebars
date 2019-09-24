@@ -1,3 +1,25 @@
 {{!-- router.get('/profile', function(req, res) {
     res.render('profile-page', {layout: 'main.handlebars'});
 }); --}}
+
+<section class="profile container">
+    <div class="row">
+        <div class="col-4" id="profileImage">
+            <img src="{{dataValues.imgsrc}}">
+        </div>
+        <div class="col-8">
+            <p class="info" id="name"><span class="infoTitle">Name: </span> {{dataValues.name}} </p>
+            <p class="info" id="age"><span class="infoTitle">Age: </span> {{dataValues.age}} </p>
+
+            {{!-- change the below to have imput field; check past HW for inline editing --}}
+            <p class="info" id="height"><span class="infoTitle">Hieght: </span> {{dataValues.height_ft}}' {{dataValues.height_inch}} '' </p>
+            <p class="info" id="location"><span class="infoTitle">Location: </span> {{dataValues.location}} {{dataValues.city}} </p>
+            <p class="info" id="drink"><span class="infoTitle">Drinking Frequence: </span> {{dataValues.drink}} </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="decription">
+            {{dataValues.description}}
+        </div>
+    </div>
+</section>
