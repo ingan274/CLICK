@@ -1,0 +1,36 @@
+{{!-- router.get('/', function(req, res) {
+    res.render('signup', {layout: 'inital.handlebars'});
+}); --}}
+
+<form>
+    {{!-- validate that another username is not taken --}}
+    {{!-- username error --}}
+    <div id="errorUsername"></div>
+    <div class="form-group">
+        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+        <div class="input-group mb-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">@</div>
+            </div>
+            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="emailinput">Email address</label>
+        <input type="email" class="form-control" id="emailinput" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    {{!-- validate that another both passwords are the same --}}
+    {{!-- password error --}}
+    <div id="password"></div>
+    <div class="form-group">
+        <label for="userpassword1">Password</label>
+        <input type="password" class="form-control" id="userpassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label for="userpassword2">Confirm Password</label>
+        <input type="password" class="form-control" id="userpassword1" placeholder="Password Again">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<a src="/" class="loginlink">Log In</a>
