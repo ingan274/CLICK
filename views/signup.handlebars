@@ -12,12 +12,16 @@
             <div class="input-group-prepend">
                 <div class="input-group-text">@</div>
             </div>
-            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+            <input type="text" class="form-control is-invalid" id="inlineFormInputGroup" placeholder="Username">
         </div>
     </div>
     <div class="form-group">
         <label for="emailinput">Email address</label>
-        <input type="email" class="form-control" id="emailinput" aria-describedby="emailHelp" placeholder="Enter email">
+        <input type="email" class="form-control is-invalid" id="emailinput" aria-describedby="emailHelp"
+            placeholder="Enter email" required>
+        <div class="invalid-feedback">
+            Please enter a email.
+        </div>
     </div>
     {{!-- validate that another both passwords are the same --}}
     {{!-- password error --}}

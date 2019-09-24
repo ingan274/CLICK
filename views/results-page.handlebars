@@ -23,3 +23,11 @@
 
     <button type="submit" class="btn btn-primary mb-2">Submit</button>
 </form>
+
+<section class="container-fluid">
+    <div class="results">
+        {{#each results}}
+            {{> results}}
+        {{/each}}
+    </div>
+</section>
