@@ -1,3 +1,11 @@
-.list-group-item {
-  line-height: 2.5;
+:root {
+  --title-font: 'Rubik', sans-serif;
+  /* weight: 400,500,900 */
+  --text-font: 'Cormorant', serif;
+  /* weight: 400, 400i, 500, 700 */
+  --black: #1f282f;
+  --grey: #7e8891;
+  --light-pink: #f0cecd;
+  --med-pink: #d57a77;
+  --dark-pink: #923226;
 }
