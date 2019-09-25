@@ -1,0 +1,21 @@
+:root {
+    --title-font: 'Rubik', sans-serif;
+    /* weight: 400,500,900 */
+    --text-font: 'Cormorant', serif;
+    /* weight: 400, 400i, 500, 700 */
+    --black: #1f282f;
+    --grey: #7e8891;
+    --light-pink: #f0cecd;
+    --med-pink: #d57a77;
+    --dark-pink: #923226;
+  }
+  
+.profilePic img {
+    border: 8px solid var(--black);
+    width: 90%;
+    height: auto;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+}
