@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS click_db;
+
+CREATE DATABASE click_db;
