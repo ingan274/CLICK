@@ -3,8 +3,8 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
+    db.Tech.findAll({}).then(function(dbExamples) {
+      res.render("initial-quiz", {
         msg: "Welcome!",
         examples: dbExamples
       });
