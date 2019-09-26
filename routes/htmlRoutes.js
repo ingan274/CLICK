@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function (app) {
 
-  load the initial quiz page
+  // load the initial quiz page
   app.get("/", function (req, res) {
     res.render("initial-quiz", ({ layout: "initial.handlebars" }));
   });
