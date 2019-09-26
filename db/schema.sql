@@ -1,9 +1,7 @@
-DROP DATABASE IF EXISTS Clicq;
-CREATE database Clicq;
+DROP DATABASE IF EXISTS click_db;
+CREATE database click_db;
 
-USE Clicq;
-
-
+USE click_db;
 CREATE TABLE `Matches` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
