@@ -10,12 +10,55 @@
     --dark-pink: #923226;
   }
   
-.profilePic img {
-    border: 8px solid var(--black);
-    width: 90%;
-    height: auto;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -o-border-radius: 50%;
+
+
+.padding {
+  padding: 50px 50px;
+}
+
+.aboutpage {
+  background-color: var(--light-pink);
+}
+
+.about-header {
+  background-image: linear-gradient(to bottom, #f0cecdd0, #f0cecd80), url("../imgs/coffee.jpg");
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 120px 50px;
+  margin: 80px auto;
+}
+
+.title {
+  font-family: var(--text-font);
+  font-weight: 700;
+  font-size: 120px;
+  color: white;
+}
+
+.subtitle {
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: 42px;
+  color: var(--black);
+  line-height: 10px;
+}
+
+/* ----purpose----- */
+
+.purpose {
+  background-image: linear-gradient(to bottom, #f0cecdd0, #f0cecd80), url("../imgs/w_w_lean.jpg");
+}
+
+/* ----team----- */
+
+.profilePic {
+  border: 8px solid var(--med-pink);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
 }
