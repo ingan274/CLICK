@@ -16,8 +16,6 @@ module.exports = function (app) {
   //   res.render("signup", ({ layout: 'initial.handlebars' }));
   // });
 
-  
-
 
 
   // // Load example page and pass in an example by id
