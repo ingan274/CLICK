@@ -21,14 +21,15 @@
   <link href="https://fonts.googleapis.com/css?family=Cormorant:400,400i,500,700|Rubik:400,500,900&display=swap"
     rel="stylesheet">
   <!-- styling css -->
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/about.css">
-  <link rel="stylesheet" href="/css/result-profile.css">
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/navigation.css">
+  <link rel="stylesheet" href="/styles/about.css">
+  <link rel="stylesheet" href="/styles/result-profile.css">
   <script src="/js/resultsprofile.js" type="text/javascript"></script>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg" id="navBar">
+  <nav class="navbar fixed-top  navbar-expand-lg container" id="navBar">
     <img src="/imgs/logo.png" class="navbar-brand" id="click-logo-nav">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,9 +37,9 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" id="applink" href="/results">The App</a>
+          <a class="nav-link" id="applink" href="/dates">The App</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="about" href="/my-profile">Profile</a>
@@ -50,16 +51,16 @@
     </div>
   </nav>
 
-  {{body}}
+  {{{body}}}
 
-  <footer class="container-fluid socialFooter">
-        <div class="row">
-            <a src="https://github.com/ingan274/CLICK" class="socialicon"><img src="/imgs/social/gh.png"></a>
-            <img src="/imgs/social/insta.png" class="socialicon">
-            <img src="/imgs/social/fb.png" class="socialicon">
-            <img src="/imgs/social/twitter.png" class="socialicon">
-        </div>
+  <section class="social-row">
+    <footer class="container-fluid socialFooter">
+      <a href="https://github.com/ingan274/CLICK"><img class="socialicon" src="/imgs/social/gh.png"></a>
+      <img src="/imgs/social/insta.png" class="socialicon">
+      <img src="/imgs/social/fb.png" class="socialicon">
+      <img src="/imgs/social/twitter.png" class="socialicon">
     </footer>
+  </section>
 
 </body>
 

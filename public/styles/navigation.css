@@ -1,0 +1,42 @@
+:root {
+    --title-font: 'Rubik', sans-serif;
+    /* weight: 400,500,900 */
+    --text-font: 'Cormorant', serif;
+    /* weight: 400, 400i, 500, 700 */
+    --black: #1f282f;
+    --grey: #7e8891;
+    --light-pink: #f0cecd;
+    --med-pink: #d57a77;
+    --dark-pink: #923226;
+}
+
+.navbar {
+    background: linear-gradient( rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93));
+}
+
+.navbar-brand {
+    width: 150px;
+}
+
+.nav-link {
+    font-family: var(--title-font);
+    font-weight: 500;
+    color: var(--grey);
+}
+
+.nav-link:hover {
+    color: var(--med-pink);
+}
+
+/* -----------Footer------------ */
+.social-row{
+    height: 50px; 
+    margin: 80px 0px 20px 0px;
+}
+.socialFooter {
+    text-align: center;
+}
+
+.socialicon {
+    width: 50px;
+}

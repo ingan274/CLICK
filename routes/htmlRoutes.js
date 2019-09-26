@@ -7,7 +7,7 @@ module.exports = function (app) {
     res.render("initial-quiz", ({ layout: "initial.handlebars" }));
   });
 
-  //load the first page for signin
+  // load the first page for signin
   app.get("/", function (req, res) {
     res.render("signin", ({ layout: 'initial.handlebars' }));
   });

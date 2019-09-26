@@ -10,12 +10,136 @@
     --dark-pink: #923226;
   }
   
-.profilePic img {
-    border: 8px solid var(--black);
-    width: 90%;
-    height: auto;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -o-border-radius: 50%;
+
+
+.padding {
+  padding: 50px 50px;
+}
+
+.aboutpage {
+  background-color: var(--light-pink);
+}
+
+.about-header {
+  background-image: linear-gradient(to bottom, #f0cecdd0, #f0cecd80), url("../imgs/coffee.jpg");
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 170px 50px;
+  margin: 80px auto;
+}
+
+.title {
+  font-family: var(--text-font);
+  font-weight: 700;
+  font-size: 120px;
+  color: white;
+}
+
+.subtitle {
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: 42px;
+  color: var(--black);
+  line-height: 10px;
+}
+
+/* ----purpose----- */
+
+.purpose {
+  background-image: linear-gradient(to bottom, #f0cecdc4, #f0cecd9d), url("../imgs/w_w_lean.jpg");
+  height: 800px;
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  padding: 120px 150px;
+  margin: 80px auto;
+}
+
+.problem {
+  font-family: var(--title-font);
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--black);
+  padding: 15px 0px;
+}
+
+.solution {
+  font-family: var(--text-font);
+  font-weight: 500;
+  font-size: 25px;
+  color: var(--black);
+  padding: 15px 0px;
+}
+
+.emphesis {
+  font-family: var(--text-font);
+  font-weight: 700;
+}
+
+/* ----team----- */
+
+.teamTitle {
+  font-family: var(--title-font);
+  font-weight: 500;
+  font-size: 50px;
+  color: var(--dark-pink);
+  margin: 0px auto;
+}
+
+.profilePic {
+  border: 8px solid var(--med-pink);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 50px auto;
+}
+
+.team {
+  text-align: center;
+}
+
+.teamName {
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: 30px;
+  color: var(--med-pink);
+  text-align: center;
+}
+
+.description {
+  font-family: var(--text-font);
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--grey);
+  text-align: left;
+}
+
+/* ----footer----- */
+
+.socialFooter {
+  text-align: center;
+}
+.joinClick {
+  width: 400px;
+  margin: 50px 0px 20px 0px;
+}
+
+.enterApp {
+  font-family: var(--text-font);
+  font-weight: 500;
+  color: var(--med-pink);
+  font-size: 20px;
+}
+
+
+#login:hover, #signup:hover {
+  font-family: var(--text-font);
+  font-weight: 700;
+  color: var(--dark-pink);
+  font-size: 20px;
 }
