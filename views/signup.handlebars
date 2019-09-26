@@ -2,39 +2,26 @@
     res.render('signup', {layout: 'inital.handlebars'});
 }); --}}
 
-<form>
-    {{!-- validate that another username is not taken --}}
-    {{!-- username error --}}
-    <div id="errorUsername"></div>
-    <div class="form-group">
-        <label class="sr-only" for="inlineFormInputGroup">Username</label>
-        <div class="input-group mb-2">
-            <div class="input-group-prepend">
-                <div class="input-group-text">@</div>
-            </div>
-            <input type="text" class="form-control is-invalid" id="inlineFormInputGroup" placeholder="Username">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="emailinput">Email address</label>
-        <input type="email" class="form-control is-invalid" id="emailinput" aria-describedby="emailHelp"
-            placeholder="Enter email" required>
-        <div class="invalid-feedback">
-            Please enter a email.
-        </div>
-    </div>
-    {{!-- validate that another both passwords are the same --}}
-    {{!-- password error --}}
-    <div id="password"></div>
-    <div class="form-group">
-        <label for="userpassword1">Password</label>
-        <input type="password" class="form-control" id="userpassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-        <label for="userpassword2">Confirm Password</label>
-        <input type="password" class="form-control" id="userpassword1" placeholder="Password Again">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-<a src="/" class="loginlink">Log In</a>
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title></title>
+</head>
+ 
+<body>
+    <form id="signup" name="signup" method="post" action="/signup">
+        <label for="email">Email Address</label>
+        <input class="text" name="email" type="email" />
+        <label for="firstname">Firstname</label>
+        <input name="firstname" type="text" />
+        <label for="lastname">Lastname</label>
+        <input name="lastname" type="text" />
+        <label for="password">Password</label>
+        <input name="password" type="password" />
+        <input class="btn" type="submit" value="Sign Up" />
+    </form>
+ 
+</body>
+ 
+</html>
