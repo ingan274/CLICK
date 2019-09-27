@@ -4,39 +4,145 @@
 
 <div class="container formDiv">
     <form class="form-inline">
-        <label for="gender">Gender</label>
+        <label for="gender">Gender: </label>
         <select class="form-control" id="gender">
+            <option selected>Select</option>
             <option>Male</option>
             <option>Female</option>
             <option>Transgender</option>
             <option>Other</option>
         </select>
 
-        <label for="gender">Age</label>
-        <input type="text" class="form-control" id="minAge" placeholder="Minimum Age">
-        <input type="text" class="form-control" id="maxAge" placeholder="Maximum Age">
-
-        <label for="gender">Height</label>
-        <input type="text" class="form-control" id="minFt" placeholder="Minimum Height (ft)">
-        <input type="text" class="form-control" id="minInch" placeholder="(inch)">
-        <input type="text" class="form-control" id="maxFt" placeholder="Maxium Height (ft)">
-        <input type="text" class="form-control" id="maxInch" placeholder="(inch)">
-
+        <label for="ageMin"> Minimum Age: </label>
+        <select class="form-control" id="ageMin">
+            <option selected>Min. Age:</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+            <option>32</option>
+            <option>33</option>
+            <option>34</option>
+            <option>35</option>
+            <option>36</option>
+            <option>37</option>
+            <option>38</option>
+            <option>39</option>
+            <option>40</option>
+            <option>41</option>
+            <option>42</option>
+            <option>43</option>
+            <option>44</option>
+            <option>45</option>
+            <option>46</option>
+            <option>47</option>
+            <option>48</option>
+            <option>49</option>
+        </select>
+        <label for="maxAge"> Minimum Age: </label>
+        <select class="form-control" id="ageMax">
+            <option selected>Max. Age:</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+            <option>32</option>
+            <option>33</option>
+            <option>34</option>
+            <option>35</option>
+            <option>36</option>
+            <option>37</option>
+            <option>38</option>
+            <option>39</option>
+            <option>40</option>
+            <option>41</option>
+            <option>42</option>
+            <option>43</option>
+            <option>44</option>
+            <option>45</option>
+            <option>46</option>
+            <option>47</option>
+            <option>48</option>
+            <option>49</option>
+        </select>
         <label for="location">Location</label>
         <select class="form-control" id="location">
             {{#each location}}
             <option>{{dataValues.location}}, {{dataValues.city}}</option>
             {{/each}}
         </select>
+        <label for="heightFtMin heightInchMin ">Min Height:</label>
+        <select class="form-control" id="heightFtMin">
+            <option selected>Min. (Ft)</option>
+            <option data-value="4">4'</option>
+            <option data-value="5">5'</option>
+            <option data-value="6">6'</option>
+            <option data-value="7">7'</option>
+        </select>
+        <select class="form-control" id="heightInchMin">
+            <option selected>Min. (Inch)</option>
+            <option data-value="0">0''</option>
+            <option data-value="1">1''</option>
+            <option data-value="2">2''</option>
+            <option data-value="3">3''</option>
+            <option data-value="4">4''</option>
+            <option data-value="5">5''</option>
+            <option data-value="6">6''</option>
+            <option data-value="7">7''</option>
+            <option data-value="8">8''</option>
+            <option data-value="9">9''</option>
+            <option data-value="10">10''</option>
+            <option data-value="11">11''</option>
+        </select>
+
+        <label for="heightFtMax heightInchMax ">Max Height:</label>
+        <select class="form-control" id="heightFtMax">
+            <option selected>Max. (Ft)</option>
+            <option data-value="4">4'</option>
+            <option data-value="5">5'</option>
+            <option data-value="6">6'</option>
+            <option data-value="7">7'</option>
+        </select>
+        <select class="form-control" id="heightInchMax">
+            <option selected>Max. (Inch)</option>
+            <option data-value="0">0''</option>
+            <option data-value="1">1''</option>
+            <option data-value="2">2''</option>
+            <option data-value="3">3''</option>
+            <option data-value="4">4''</option>
+            <option data-value="5">5''</option>
+            <option data-value="6">6''</option>
+            <option data-value="7">7''</option>
+            <option data-value="8">8''</option>
+            <option data-value="9">9''</option>
+            <option data-value="10">10''</option>
+            <option data-value="11">11''</option>
+        </select>
 
         <label for="Drink">Drink Frequency</label>
-        <select class="form-control" id="location">
+        <select class="form-control" id="drink">
             {{#each drinks}}
             <option>{{dataValues.drink}}</option>
             {{/each}}
         </select>
 
-        <button type="submit" class="btn btn-primary mb-2">CLICK</button>
+        <button type="submit" class="btn btn-primary mb-2 " id="submit-button">CLICK</button>
     </form>
 </div>
 
