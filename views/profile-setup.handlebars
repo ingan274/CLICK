@@ -2,3 +2,87 @@
     res.render('preference-quiz', {layout: 'survey.handlebars'});
 }); --}}
 
+<body>
+
+    <div class="wrapper">
+
+        <header>
+            <div id="header_block">
+                <img id="logo_image" src="/" alt="Click Logo">
+                <!--<div id="header_name_text_block"><h1 id="header_name_text">Click</h1></div>-->
+                <nav>
+                    <div class="nav_link">
+                        <p><a href="index.html">The App</a></p>
+                    </div>
+                    <div class="nav_vertical_bar"></div>
+                    <div class="nav_link">
+                        <p><a href="portfolio.html">My Profile</a></p>
+                    </div>
+                    <div class="nav_vertical_bar"></div>
+                    <div class="nav_link">
+                        <p><a href="contact.html">About</a></p>
+                    </div>
+                    <div class="nav_vertical_bar"></div>
+                </nav>
+            </div>
+        </header>
+
+        <div id="main_block">
+            <section>
+                <h2>About You</h2>
+                <div id="section_grey_line"></div>
+                <!--<img id="about_me_image" src="assets/images/about_me.png" alt="Me">-->
+                <form action="/">
+                    First Name:<br>
+                    <input type="text" name="firstname" class="input-box">
+                    <br>
+                    <div id="section_grey_line"></div>
+                    Last Name:<br>
+                    <input type="text" name="lastname" class="input-box">
+                    <br>
+                    <div id="section_grey_line"></div>
+                    Age:<br>
+                    <input type="text" name="age" class="input-box">
+                    <br>
+                    <div id="section_grey_line"></div>
+                    Gender:
+                    <select>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="transgender">Transgender</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br>
+                    <div id="section_grey_line"></div>
+                    Location:<br>
+                    <input type="text" name="location" placeholder="City, State" class="input-box">
+                    <br>
+                    <div id="section_grey_line"></div>
+                    Alcohol Consumption:
+                    <select>
+                        <option value="never">Never</option>
+                        <option value="occasionally">Occasionally</option>
+                        <option value="socially">Socially</option>
+                        <option value="all_day_everyday">All Day Everyday</option>
+                    </select>
+                    <br>
+                    <div id="section_grey_line"></div>
+                    Short Description:<br>
+                    <textarea rows="4" cols="50"></textarea>
+                    <br>
+                    <div id="section_grey_line"></div>
+                    Profile Image Link:<br>
+                    <input type="text" name="location" class="input-box">
+                    <br>
+                    <div id="section_grey_line"></div>
+                    <button class="button"><span>Submit</span></button>
+                    <!--<input type="submit">-->
+                </form>
+            </section>
+        </div>
+    </div>
+    <div class="push"></div>
+    <footer>
+        <div id="footer_line"></div>
+    </footer>
+</body>
