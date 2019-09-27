@@ -4,7 +4,7 @@ module.exports = function (app, passport) {
 
     app.get('/signup', authController.signup);
 
-    app.get('/signin', authController.signin);
+    app.get('/', authController.signin);
 
     app.post('/signup', passport.authenticate('local-signup', {
         successRedirect: '/my-profile',
@@ -21,7 +21,7 @@ module.exports = function (app, passport) {
     app.post('/signin', passport.authenticate('local-signin', {
         successRedirect: '/my-profile',
 
-        failureRedirect: '/signin'
+        failureRedirect: '/'
     }
 
     ));
@@ -32,7 +32,7 @@ module.exports = function (app, passport) {
 
             return next();
 
-        res.redirect('/signin');
+        res.redirect('/');
 
     }
 

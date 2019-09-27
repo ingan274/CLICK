@@ -45,7 +45,6 @@ module.exports = function (sequelize, DataTypes) {
     city: {
       type: DataTypes.STRING,
       validate: {
-        is: ["^[a-z]+$", 'i'],
         len: [3, 50]
       }
     },
