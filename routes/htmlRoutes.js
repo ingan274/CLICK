@@ -4,7 +4,7 @@ module.exports = function (app) {
 
   // load the initial quiz page
   app.get("/", function (req, res) {
-    res.render('results-profile', {layout: 'main.handlebars'});
+    res.render('profile-setup', {layout: 'survey.handlebars'});
   });
 
   // // load the first page for signin
