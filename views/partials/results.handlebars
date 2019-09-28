@@ -1,10 +1,10 @@
 <div class="ind-result">
-    <div class="imageDiv">
+    <div class="imageDiv" id="{{dataValues.id}}">
         <img src="{{dataValues.imgsrc}}" class="resultImage">
     </div>
-    <div class="description-short">
+    <div class="description-short" id="{{dataValues.id}}">
         <p class="nameage">{{dataValues.name}} <span class="age">{{dataValues.age}}</span></p>
-        <button type="button" class="btn profile" id="profile-{{dataValues.id}}" data-id="profile-{{dataValues.id}}">Profile</button>
-        <button type="button" class="btn connect" id="connect-{{dataValues.id}}" data-id="connect-{{dataValues.id}}">Connect</button>
+        <button type="button" class="btn profile" id="profile-{{dataValues.id}}" data-id="{{dataValues.id}}">Profile</button>
+        <button type="button" class="btn connect" id="connect-{{dataValues.id}}" data-id="{{dataValues.id}}">Connect</button>
     </div>
 </div>
