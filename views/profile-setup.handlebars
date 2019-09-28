@@ -1,88 +1,59 @@
 {{!-- router.get('/profile-quiz', function(req, res) {
-    res.render('preference-quiz', {layout: 'survey.handlebars'});
+    res.render('profile-setup', {layout: 'survey.handlebars'});
 }); --}}
 
-<body>
+<div class="container profile-setup" id="main_block">
+    <section>
+        <h2 class="titleAboutYou">About You</h2>
+        <div id="section_grey_line"></div>
+        <!--<img id="about_me_image" src="assets/images/about_me.png" alt="Me">-->
+        <form action="/" class="labelTitle">
+            <div class="form-row">
+                <p class="label">First Name:</p>
+                <input type="text" name="firstname" class="input-box name">
+                <p class="label">Last Name:</p>
+                <input type="text" name="lastname" class="input-box name ">
 
-    <div class="wrapper">
+                <p class="label">Age:</p>
+                <input type="text" name="age" class="input-box age">
 
-        <header>
-            <div id="header_block">
-                <img id="logo_image" src="/" alt="Click Logo">
-                <!--<div id="header_name_text_block"><h1 id="header_name_text">Click</h1></div>-->
-                <nav>
-                    <div class="nav_link">
-                        <p><a href="index.html">The App</a></p>
-                    </div>
-                    <div class="nav_vertical_bar"></div>
-                    <div class="nav_link">
-                        <p><a href="portfolio.html">My Profile</a></p>
-                    </div>
-                    <div class="nav_vertical_bar"></div>
-                    <div class="nav_link">
-                        <p><a href="contact.html">About</a></p>
-                    </div>
-                    <div class="nav_vertical_bar"></div>
-                </nav>
+                <p class="label">Gender:</p>
+                <select class="form">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="transgender">Transgender</option>
+                    <option value="other">Other</option>
+                </select>
             </div>
-        </header>
+            <div class="form-row">
+                <p class="label">Location:</p>
+                <input type="text" name="locationCity" placeholder="City" class="input-box location">
+                <input type="text" name="locationState" placeholder="State" class="input-box location">
+                <br>
 
-        <div id="main_block">
-            <section>
-                <h2>About You</h2>
-                <div id="section_grey_line"></div>
-                <!--<img id="about_me_image" src="assets/images/about_me.png" alt="Me">-->
-                <form action="/">
-                    First Name:<br>
-                    <input type="text" name="firstname" class="input-box">
-                    <br>
-                    <div id="section_grey_line"></div>
-                    Last Name:<br>
-                    <input type="text" name="lastname" class="input-box">
-                    <br>
-                    <div id="section_grey_line"></div>
-                    Age:<br>
-                    <input type="text" name="age" class="input-box">
-                    <br>
-                    <div id="section_grey_line"></div>
-                    Gender:
-                    <select>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="transgender">Transgender</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <br>
-                    <div id="section_grey_line"></div>
-                    Location:<br>
-                    <input type="text" name="location" placeholder="City, State" class="input-box">
-                    <br>
-                    <div id="section_grey_line"></div>
-                    Alcohol Consumption:
-                    <select>
-                        <option value="never">Never</option>
-                        <option value="occasionally">Occasionally</option>
-                        <option value="socially">Socially</option>
-                        <option value="all_day_everyday">All Day Everyday</option>
-                    </select>
-                    <br>
-                    <div id="section_grey_line"></div>
-                    Short Description:<br>
-                    <textarea rows="4" cols="50"></textarea>
-                    <br>
-                    <div id="section_grey_line"></div>
-                    Profile Image Link:<br>
-                    <input type="text" name="location" class="input-box">
-                    <br>
-                    <div id="section_grey_line"></div>
-                    <button class="button"><span>Submit</span></button>
-                    <!--<input type="submit">-->
-                </form>
-            </section>
-        </div>
-    </div>
-    <div class="push"></div>
-    <footer>
-        <div id="footer_line"></div>
-    </footer>
-</body>
+                <p class="label">Alcohol Consumption:</p>
+                <select class="form">
+                    <option selected>Select Frequency</option>
+                    <option value="never">Never</option>
+                    <option value="occasionally">Occasionally</option>
+                    <option value="socially">Socially</option>
+                    <option value="all_day_everyday">All Day Everyday</option>
+                </select>
+            </div>
+            <div class="form-row row row">
+                <p class="label">Short Description:</p>
+                <textarea rows="4" cols="50"
+                    placeholder="What would you like others to know about you? What is your ideal first date?"
+                    class="shortDesc"></textarea>
+            </div>
+            <div class="form-row">
+                <p class="label">Profile Image Link:</p>
+                <input type="text" name="imageURL" class="input-box imageurl" placeholder="http://">
+            </div>
+            <button class="button submit-button"><span>Submit</span></button>
+            <!--<input type="submit">-->
+            {{!-- PREFERENCE QUIZ BELOW --}}
+            
+        </form>
+    </section>
+</div>

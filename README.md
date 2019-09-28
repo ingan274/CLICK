@@ -3,6 +3,7 @@ img {
     margin: 5px auto;
 }
 </style>
+
 # CLICK
 #### A modern day dating app that starts with the foundation of common knowledge
 
