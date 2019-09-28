@@ -9,17 +9,16 @@
     --med-pink: #d57a77;
     --dark-pink: #923226;
 }
-  
 
 .formDiv {
-    margin: 100px auto;
     background: var(--light-pink);
     font-family: var(--text-font);
     font-weight: 700;
     font-size: 14px;
     text-align: center;
-    padding: 20px 100px;
+    padding: 20px 20px;
 }
+
 
 label {
     padding-left: 20px;
@@ -60,7 +59,19 @@ label {
     font-size: 13px;
 }
 
-
 #submit-button:hover {
     background: var(--dark-pink);
 }
+
+
+/* _____ INT RESULT CSS ______ */
+
+.imageDiv {
+    margin: 20px;
+    width: 32%;
+    height: 400px;
+    background-color: #1f282f;
+    border: 10px solid white, 
+}
+
+.nameage 
