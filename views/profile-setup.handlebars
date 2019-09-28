@@ -4,7 +4,7 @@
 
 <div class="container profile-setup" id="main_block">
     <section>
-        <form action="/api/userprofile" class="labelTitle">
+        <form class="labelTitle">
             <h2 class="profileSetUp-Title">About You</h2>
 
             <div class="section">
@@ -92,6 +92,11 @@
                     <input type="text" name="imageURL" class="input-box imageurl" placeholder="http://">
                 </div>
             </div>
+            <button class="button submit-button">Next</button>
+            <!--<input type="submit">-->
+        </form>
+        <form  class="labelTitle">
+            {{!-- action="/" --}}
             {{!-- PREFERENCE QUIZ BELOW --}}
             <h2 class="profileSetUp-Title">Preferences</h2>
             <div class="section">
