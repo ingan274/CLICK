@@ -9,4 +9,30 @@
     --med-pink: #d57a77;
     --dark-pink: #923226;
   }
-  
+
+.signupDIV, .signinDIV {
+    text-align: center;
+}
+
+form {
+    margin: 300px auto;
+}
+
+.text {
+    font-family: var(--text-font);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+label,  #signUpBtn {
+    font-family: var(--title-font);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#signUpBtn {
+    background: var(--light-pink);
+}
+
+
+

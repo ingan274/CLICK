@@ -30,7 +30,7 @@ module.exports = function (app) {
   });
 
 
-  app.get("/all-results", function(req, res) {
+  app.get("/matches", function(req, res) {
     db.Tech.findAll({}).then(function(results) {
       res.render("results-page", {data: results});
     });

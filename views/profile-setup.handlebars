@@ -7,18 +7,18 @@
         <h2 class="profileSetUp-Title">About You</h2>
         <div id="section_grey_line"></div>
         <!--<img id="about_me_image" src="assets/images/about_me.png" alt="Me">-->
-        <form action="/" class="labelTitle">
+        <form action="/api/userprofile" class="labelTitle">
             <div class="form-row">
                 <p class="label">First Name:</p>
-                <input type="text" name="firstname" class="input-box name">
+                <input type="text" name="firstname" class="input-box firstNameInput">
                 <p class="label">Last Name:</p>
-                <input type="text" name="lastname" class="input-box name ">
+                <input type="text" name="lastname" class="input-box lastNameInput ">
 
                 <p class="label">Age:</p>
-                <input type="text" name="age" class="input-box age">
+                <input type="text" name="age" class="input-box ageInput">
 
                 <p class="label">Gender:</p>
-                <select class="form">
+                <select class="form genderInput">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="transgender">Transgender</option>
@@ -53,17 +53,17 @@
 
             {{!-- PREFERENCE QUIZ BELOW --}}
 
-             <h2 class="profileSetUp-Title">Preferences</h2>
+            <h2 class="profileSetUp-Title">Preferences</h2>
             <p class="label">Gender:</p>
-            <select>
+            <select class="genderPref">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="transgender">Transgender</option>
                 <option value="other">Other</option>
             </select>
             <div id="section_grey_line"></div>
-           <p class="label">Age:</p>
-            <select>
+            <p class="label">Age:</p>
+            <select class="agePrefMin">
                 <option value="minimum">Min</option>
                 <option value="eighteen">18</option>
                 <option value="twenty_five">25</option>
@@ -78,7 +78,7 @@
                 <option value="eighty_eight">88</option>
                 <option value="one_hundred">100</option>
             </select>
-            <select>
+            <select class="agePrefMax">
                 <option value="maximum">Max</option>
                 <option value="twenty_four">24</option>
                 <option value="thirty_one">31</option>
@@ -93,10 +93,9 @@
                 <option value="ninty_four">94</option>
                 <option value="one_hundred_plus">100+</option>
             </select>
-            <div id="section_grey_line"></div>
-           <p class="label">Height:</p>
+            <p class="label">Height:</p>
             <p class="label">Minimum:</p>
-            <select>
+            <select class="heightPrefMinFt">
                 <option value="feet">(ft)</option>
                 <option value="four">4</option>
                 <option value="five">5</option>
@@ -104,7 +103,7 @@
                 <option value="seven">7</option>
                 <option value="eight">8</option>
             </select>
-            <select>
+            <select class="heightPrefMinInch">
                 <option value="inches">(in)</option>
                 <option value="zero">0</option>
                 <option value="one">1</option>
@@ -121,7 +120,7 @@
             </select>
             <br>
             <p class="label">Maximum:</p>
-            <select>
+            <select class="heightPrefMaxFt">
                 <option value="feet">(ft)</option>
                 <option value="four">4</option>
                 <option value="five">5</option>
@@ -129,7 +128,7 @@
                 <option value="seven">7</option>
                 <option value="eight">8</option>
             </select>
-            <select>
+            <select class="heightPrefMaxInch">
                 <option value="inches">(in)</option>
                 <option value="zero">0</option>
                 <option value="one">1</option>
@@ -146,28 +145,15 @@
             </select>
             <br>
             <p class="label"> Alcohol Consumption:</p>
-           
-            <select>
+            <select class="alcoholPref">
                 <option value="never">Never</option>
                 <option value="occasionally">Occasionally</option>
                 <option value="socially">Socially</option>
                 <option value="all_day_everyday">All Day Everyday</option>
             </select>
             <br>
-            <div id="section_grey_line"></div>
             <button class="button"><span>Submit</span></button>
             <!--<input type="submit">-->
         </form>
-
-</div>
-</div>
-<div class="push"></div>
-<footer>
-    <div id="footer_line"></div>
-</footer>
-</body>
-
-
-</form>
-</section>
+    </section>
 </div>
