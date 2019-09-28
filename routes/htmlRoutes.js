@@ -17,7 +17,11 @@ module.exports = function (app) {
   })
 
   app.get("/about", function(req, res) {
-    res.render("aboutapp")
+    res.render("aboutapp", ({layout: 'initial.handlebars'}) );
+  });
+
+  app.get("/profile-setup", function(req, res) {
+    res.render('profile-setup', {layout: 'survey.handlebars'});
   });
 
   app.get("/my-profile/:name", function(req, res) {
@@ -26,7 +30,7 @@ module.exports = function (app) {
         name: req.params.name//take username from login info and match from tech db to get profile of logged in user  
       }
     })
-    res.render("profile-page")
+    res.render('profile-page', {layout: 'main.handlebars'})
   });
 
 
