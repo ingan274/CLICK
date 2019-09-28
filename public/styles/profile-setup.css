@@ -1,0 +1,100 @@
+:root {
+    --title-font: 'Rubik', sans-serif;
+    /* weight: 400,500,900 */
+    --text-font: 'Cormorant', serif;
+    /* weight: 400, 400i, 500, 700 */
+    --black: #1f282f;
+    --grey: #7e8891;
+    --light-pink: #f0cecd;
+    --light-pink-half: #f0cecd6e;
+    --light-pink: #f0cecd;
+    --med-pink: #d57a77;
+    --med-pink-half: #d57a7780;
+    --dark-pink: #923226;
+    --dark-pink-half: #9233267a;
+  }
+  
+.profile-setup {
+    margin: 100px auto;
+    margin-bottom: 10px;
+}
+
+.titleAboutYou {
+  font-family: var(--text-font)l;
+  font-weight: 500;
+  font-size: 80px;
+  color: var(--med-pink);
+}
+
+form {
+  background: var(--light-pink-half);
+  border-radius: 10px;
+  padding: 50px 40px;
+}
+
+.labelTitle {
+  font-family: var(--title-font)l;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--dark-pink);
+}
+
+.label {
+  margin: 20px 10px;
+  margin-bottom: 5px;
+}
+
+input, .form {
+  height: 30px;
+  margin: 20px 10px;
+  font-size: 12px;
+  padding: 10px;
+ 
+}
+
+input, .form, textarea {
+  border: 2px solid var(--med-pink);
+  font-family: var(--text-font);
+  font-size: 16px;
+}
+input:hover, textarea:hover {
+  border: 2px solid var(--dark-pink);
+}
+
+.name {
+  width:180px;
+}
+
+.age {
+  width: 80px;
+}
+
+.location {
+  width:220px;
+}
+
+.shortDesc {
+  width: 81%;
+  padding: 10px;
+}
+
+.imageurl {
+  margin: 0px;
+  margin-bottom: 30px;
+  width: 80%;
+  margin: 20px 10px;
+}
+
+.submit-button {
+  color: white;
+  background: var(--dark-pink-half);
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  margin: 10px auto;
+  height: 40px;
+}
+
+.submit-button:hover {
+  background: var(--dark-pink);
+}
