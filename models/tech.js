@@ -45,7 +45,6 @@ module.exports = function (sequelize, DataTypes) {
     city: {
       type: DataTypes.STRING,
       validate: {
-        is: ["^[a-z]+$", 'i'],
         len: [3, 50]
       }
     },
@@ -58,7 +57,13 @@ module.exports = function (sequelize, DataTypes) {
           "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC",
           "SD", "TN", "TX", "UM", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"]]
       },
-    }
+    },
+    // email: {
+    //   type: DataTypes.STRING,
+    //   validate: {
+    //     isEmail: true
+    //   }
+    // },
   });
   return Tech;
 };

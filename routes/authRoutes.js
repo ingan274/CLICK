@@ -4,24 +4,24 @@ module.exports = function (app, passport) {
 
     app.get('/signup', authController.signup);
 
-    app.get('/signin', authController.signin);
+    app.get('/', authController.signin);
 
     app.post('/signup', passport.authenticate('local-signup', {
-        successRedirect: '/profile',
+        successRedirect: '/my-profile',
 
         failureRedirect: '/signup'
     }
 
     ));
 
-    app.get('/profile', isLoggedIn, authController.dashboard);
+    app.get('/my-profile', isLoggedIn, authController.dashboard);
 
     app.get('/logout', authController.logout);
 
     app.post('/signin', passport.authenticate('local-signin', {
-        successRedirect: '/profile',
+        successRedirect: '/my-profile',
 
-        failureRedirect: '/signin'
+        failureRedirect: '/'
     }
 
     ));
@@ -32,7 +32,7 @@ module.exports = function (app, passport) {
 
             return next();
 
-        res.redirect('/signin');
+        res.redirect('/');
 
     }
 

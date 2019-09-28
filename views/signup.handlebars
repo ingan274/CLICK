@@ -21,6 +21,22 @@
         <input name="password" type="password" />
         <input class="btn" type="submit" value="Sign Up" />
     </form>
+
+    <div>
+        <button id="sign-inBtn" class="btn"> Sign In with An Existing Account </button>
+    </div>
+
+    <script type="text/javascript">
+        $("#sign-inBtn").on("click", function () {
+            $.ajax({
+                method: "GET",
+                url: "/",
+            })
+                .then(function () {
+                    window.location.href = "/";
+                });
+        });
+    </script>
  
 </body>
  
