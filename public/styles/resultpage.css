@@ -35,17 +35,17 @@ label {
 
 #gender, #drink {
     width: 100px;
-    height: 20px;
+    height: 30px;
 }
 
 #ageMin, #ageMax, #heightFtMin, #heightInchMin, #heightFtMax, #heightInchMax {
     width: 120px;
-    height: 20px;
+    height: 30px;
 }
 
 #location {
     width: 200px;
-    height: 20px;
+    height: 30px;
 }
 
 #submit-button {
@@ -63,8 +63,4 @@ label {
 
 #submit-button:hover {
     background: var(--dark-pink);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e4bd15e37c608d6e49c580c7ce72c00588c0e5b1

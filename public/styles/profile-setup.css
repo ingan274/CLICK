@@ -19,14 +19,15 @@
     margin-bottom: 10px;
 }
 
-.titleAboutYou {
+.profileSetUp-Title {
   font-family: var(--text-font)l;
   font-weight: 500;
   font-size: 80px;
   color: var(--med-pink);
+  margin-top: 50px;
 }
 
-form {
+.section {
   background: var(--light-pink-half);
   border-radius: 10px;
   padding: 50px 40px;
@@ -61,19 +62,31 @@ input:hover, textarea:hover {
   border: 2px solid var(--dark-pink);
 }
 
-.name {
+.nameInput {
   width:180px;
 }
 
-.age {
+.ethnicityInput {
+  width: 110px;
+}
+
+.jobInput{
+  width: 140px;
+}
+
+.ageInput {
   width: 80px;
 }
 
-.location {
+.locationInput {
   width:220px;
 }
 
-.shortDesc {
+.interestInput {
+  width: 100%;
+}
+
+.shortDescInput {
   width: 81%;
   padding: 10px;
 }
@@ -93,8 +106,20 @@ input:hover, textarea:hover {
   width: 100%;
   margin: 10px auto;
   height: 40px;
+  font-family: var(--text-font);
+}
+
+.heightLabel {
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 50px;
+}
+
+.prefDrop {
+  width: 150px;
 }
 
 .submit-button:hover {
   background: var(--dark-pink);
 }
+
