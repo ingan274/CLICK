@@ -1,3 +1,66 @@
+:root {
+    --title-font: 'Rubik', sans-serif;
+    /* weight: 400,500,900 */
+    --text-font: 'Cormorant', serif;
+    /* weight: 400, 400i, 500, 700 */
+    --black: #1f282f;
+    --grey: #7e8891;
+    --light-pink: #f0cecd;
+    --med-pink: #d57a77;
+    --dark-pink: #923226;
+}
+  
+
 .formDiv {
-    margin: 100px;
+    margin: 100px auto;
+    background: var(--light-pink);
+    font-family: var(--text-font);
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 100px;
+}
+
+label {
+    padding-left: 20px;
+}
+.form-control {
+    margin: 10px auto;
+    border: 1px solid var(--dark-pink);
+    background: rgba(255, 255, 255, 0.493);
+    font-family: var(--title-font);
+    color:var(--grey);
+    font-size: 12px;
+}
+
+#gender, #drink {
+    width: 100px;
+    height: 20px;
+}
+
+#ageMin, #ageMax, #heightFtMin, #heightInchMin, #heightFtMax, #heightInchMax {
+    width: 120px;
+    height: 20px;
+}
+
+#location {
+    width: 200px;
+    height: 20px;
+}
+
+#submit-button {
+    margin: 10px auto;
+    width: 33%;
+    height: 30px;
+    font-family: var(--title-font);
+    font-weight: 500;
+    background: var(--grey);
+    color: white;
+    border: none;
+    font-size: 13px;
+}
+
+
+#submit-button:hover {
+    background: var(--dark-pink);
 }
