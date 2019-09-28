@@ -7,7 +7,6 @@ CREATE TABLE `Matches` (
   `name` varchar(100) NOT NULL,
   `screenname` varchar(100) NOT NULL,
   `gender` varchar(50) NOT NULL,
-  `looking-for` varchar(50) NOT NULL,
   `age` int(11) NOT NULL,
   `city` varchar(100) NOT NULL,
   `ethnicity` varchar(100) NOT NULL,
@@ -22,5 +21,6 @@ CREATE TABLE `Matches` (
   `interest3` varchar(30),
   `interest4` varchar(30),
   `interest5` varchar(30),
+  `imageurl` varchar(300)
   PRIMARY KEY (`id`)
 ) 
