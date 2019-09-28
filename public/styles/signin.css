@@ -14,8 +14,17 @@
     text-align: center;
 }
 
+.titleSign {
+    font-family: var(--title-font);
+    font-weight: 500;
+    font-size: 23px;
+    margin: 20px 10px;
+    color: var(--dark-pink);
+}
+
 form {
-    margin: 300px auto;
+    margin: 0px auto;
+    margin-top: 250px;
 }
 
 .text {
@@ -24,14 +33,40 @@ form {
     font-size: 20px;
 }
 
-label,  #signUpBtn {
+label {
     font-family: var(--title-font);
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
+    margin: 15px 10px;
 }
 
-#signUpBtn {
+#signUpBtn, #signInBtn {
+    font-family: var(--title-font);
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
     background: var(--light-pink);
+    border-radius: 5px;
+    margin: 15px;
+}
+
+#signUpBtn:hover, #signInBtn:hover {
+    background: var(--med-pink);
+}
+
+.emailEntry {
+    width: 200px;
+}
+
+.createAccount, .signIn {
+    font-family: var(--text-font);
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--med-pink);
+}
+
+.createAccount:hover, .signIn:hover {
+    color: var(--dark-pink);
 }
 
 
