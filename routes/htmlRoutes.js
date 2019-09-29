@@ -30,13 +30,13 @@ module.exports = function (app) {
         name: req.params.name//take username from login info and match from tech db to get profile of logged in user  
       }
     })
-    res.render('profile-page', { layout: 'main.handlebars' })
+    res.render('profile-page')
   });
 
   // all results
   app.get("/all-matches", function (req, res) {
     db.Tech.findAll({}).then(function (results) {
-      console.log(results)
+      // console.log(results)
       res.render("results-page", { results: results });
     });
   });
@@ -47,7 +47,8 @@ module.exports = function (app) {
         id: req.params.id,
       },
     }).then(function (result) {
-      res.render("results-profile", { data: result })
+      console.log(result)
+      res.render('results-profile', {data: result})
     });
   });
 

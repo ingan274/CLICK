@@ -5,7 +5,7 @@
     <div class="result-info-short" id="{{dataValues.id}}">
         <p class="nameage name">Name: {{dataValues.name}} <span class="age nameage">Age: {{dataValues.age}}</span></p>
         <p class='location'>Location: {{dataValues.city}}, {{dataValues.state}}</p>
-        <button type="button" class="btn profile result-button" id="profile-{{dataValues.id}}" data-id="{{dataValues.id}}">See Profile</button>
+        <a class="btn result-button" id="profile profile-{{dataValues.id}}" data-id="{{dataValues.id}}" href="/result/profile/{{dataValues.id}}">See Profile</a>
         <button type="button" class="btn connect result-button" id="connect-{{dataValues.id}}" data-id="{{dataValues.id}}">Connect</button>
     </div>
 </div>
