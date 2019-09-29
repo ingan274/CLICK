@@ -4,14 +4,46 @@ module.exports = function (app) {
 
   // loads the first page to sign in with a button that on click leads to sign-up if not already 
   app.get("/", function (req, res) {
-    res.render("signin", ({ layout: "initial.handlebars" }) );
+    res.render("signin", ({ layout: "initial.handlebars" }));
   });
 
   //on click leads to signup page which renders profile  
-  app.get("/signup", function(req, res) {
-    res.render("signup", ({ layout: "initial.handlebars" }) );
+  app.get("/signup", function (req, res) {
+    res.render("signup", ({ layout: "initial.handlebars" }));
   });
 
+<<<<<<< HEAD
+  app.get("/trivia", function (req, res) {
+    res.render("initial-quiz", ({ layout: "initial.handlebars" }));
+  })
+
+  app.get("/about", function (req, res) {
+    res.render("aboutapp", ({ layout: 'initial.handlebars' }));
+  });
+
+  app.get("/profile-setup", function (req, res) {
+    res.render('profile-setup', { layout: 'survey.handlebars' });
+  });
+
+  app.get("/my-profile/:name", function (req, res) {
+    db.Tech.findOne({
+      where: {
+        name: req.params.name//take username from login info and match from tech db to get profile of logged in user  
+      }
+    })
+    res.render('profile-page')
+  });
+
+  // all results
+  app.get("/all-matches", function (req, res) {
+    db.Tech.findAll({}).then(function (results) {
+      // console.log(results)
+      res.render("results-page", { results: results });
+    });
+  });
+
+  app.get("/result/profile/:id", function (req, res) {
+=======
   //renders the trivia page
   app.get("/trivia", function(req, res) {
     res.render("initial-quiz", ({ layout: "initial.handlebars" }) );
@@ -47,12 +79,14 @@ module.exports = function (app) {
 
   //renders individual results 
   app.get("/result/profile/:id", function(req, res) {
+>>>>>>> 58b45cc227f1db03153d2b83ea078061a387e7fe
     db.Tech.findOne({
       where: {
         id: req.params.id,
       },
-    }).then(function(result) {
-      res.render("results-profile", {data: result})
+    }).then(function (result) {
+      console.log(result)
+      res.render('results-profile', {data: result})
     });
   });
 

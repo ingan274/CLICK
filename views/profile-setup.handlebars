@@ -3,8 +3,8 @@
 }); --}}
 
 <div class="container profile-setup" id="main_block">
-    <section>
-        <form action="/api/userprofile" class="labelTitle">
+    <section class="profileSetUp">
+        <form class="labelTitle">
             <h2 class="profileSetUp-Title">About You</h2>
 
             <div class="section">
@@ -27,12 +27,12 @@
                 </div>
                 <div class="form-row">
                     <p class="label">Location:</p>
-                    <input type="text" name="locationCity" placeholder="City" class="input-box locationInput">
-                    <input type="text" name="locationState" placeholder="State" class="input-box locationInput">
+                    <input type="text" name="locationCity" placeholder="City" class="input-box locationInput cityInput">
+                    <input type="text" name="locationState" placeholder="State" class="input-box locationInput stateInput">
                     <br>
 
                     <p class="label">Alcohol Consumption:</p>
-                    <select class="form">
+                    <select class="form alcoholInput">
                         <option selected>Select Frequency</option>
                         <option value="never">Never</option>
                         <option value="occasionally">Occasionally</option>
@@ -61,10 +61,10 @@
                     <input type="text" name="ethnicity" class="input-box ethnicityInput">
 
                     <p class="label">Job Position:</p>
-                    <input type="text" name="job-position" class="input-box jobInput">
+                    <input type="text" name="job-position" class="input-box jobInput positionInput">
 
                     <p class="label">Company:</p>
-                    <input type="text" name="job-company" class="input-box jobInput">
+                    <input type="text" name="job-company" class="input-box jobInput companyInput">
                 </div>
 
                 <div class="form-row">
@@ -92,6 +92,11 @@
                     <input type="text" name="imageURL" class="input-box imageurl" placeholder="http://">
                 </div>
             </div>
+            <button class="button next-button">Next</button>
+            <!--<input type="submit">-->
+        </form>
+        <form  class="labelTitle">
+            {{!-- action="/" --}}
             {{!-- PREFERENCE QUIZ BELOW --}}
             <h2 class="profileSetUp-Title">Preferences</h2>
             <div class="section">

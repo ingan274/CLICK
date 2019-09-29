@@ -5,17 +5,23 @@
 <section class="container profileContainer">
     <div class="row">
         <div class="col-4" id="profileImage">
-            <img src="{{dataValues.imgsrc}}">
+            <img src="{{dataValues.imgurl}}">
         </div>
         <div class="col-7 matchInfo">
-            <p class="info col-12" id="name-match"><span class="infoTitle">Name: </span> {{dataValues.name}} </p>
+            <p class="info col-12" id="name-match"><span class="infoTitle">Name: </span> {{dataValues.firstname}} {{dataValues.lastname}} </p>
             <p class="info col-12" id="age-match"><span class="infoTitle">Age: </span> {{dataValues.age}} </p>
+            <p class="info col-12" id="gender-match"><span class="infoTitle">Gender: </span> {{dataValues.gender}} </p>
             <p class="info col-12" id="height-match"><span class="infoTitle">Height: </span> {{dataValues.height_ft}}' {{dataValues.height_inch}} '' </p>
             <p class="info col-12" id="location-match"><span class="infoTitle">Location: </span> {{dataValues.location}} {{dataValues.city}} </p>
-            <p class="info col-12" id="drink-match"><span class="infoTitle">Drinking Frequence: </span> {{dataValues.drink}} </p>
+            <p class="info col-12" id="drink-match"><span class="infoTitle">Drinking Frequencey: </span> {{dataValues.drink}} </p>
+            <p class="info col-12" id="zodiac-match"><span class="infoTitle">Zodiac: </span> {{dataValues.drink}} </p>
+            <p class="info col-12" id="zodiac-match"><span class="infoTitle">Interests: </span> </p>
+            <p>	∙ {{dataValues.interest1}} </p>
+            <p>	∙ {{dataValues.interest2}} </p>
+            <p>	∙ {{dataValues.interest3}} </p>
         </div>
     </div>
-    <div class="decriptionTitle">{{dataValues.FirstName}}'s Decription</div>
+    <div class="decriptionTitle">{{dataValues.firstname}}'s Decription</div>
     <div class="row">
         <div class="decription">
             {{dataValues.description}}
