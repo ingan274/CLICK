@@ -1,11 +1,17 @@
 module.exports = function (sequelize, DataTypes) {
   var Tech = sequelize.define("Tech", {
-    name: {
+    firstname: {
       type: DataTypes.STRING,
       allowNull: false,
       Validite: {
         is: ["^[a-z]+$", 'i'],
-        len: [2, 50],
+      }
+    },
+    lastname: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        is: ["^[a-z]+$", 'i'],
       }
     },
     age: {
@@ -45,7 +51,7 @@ module.exports = function (sequelize, DataTypes) {
     city: {
       type: DataTypes.STRING,
       validate: {
-        len: [3, 50]
+        len: [3, 255]
       }
     },
     state: {
@@ -58,12 +64,54 @@ module.exports = function (sequelize, DataTypes) {
           "SD", "TN", "TX", "UM", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"]]
       },
     },
-    // email: {
-    //   type: DataTypes.STRING,
-    //   validate: {
-    //     isEmail: true
-    //   }
-    // },
+    zodiac: {
+      type: DataTypes.STRING,
+      validate: {
+        is: ["^[a-z]+$", 'i'],
+      }
+    },
+    ethnicity: {
+      type: DataTypes.STRING,
+    },
+    job: {
+      type: DataTypes.STRING,
+    },
+    company: {
+      type: DataTypes.STRING,
+    },
+    interest1: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [3, 500]
+      },
+    },
+    interest2: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [3, 500]
+      },
+    },
+    interest3: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [3, 500]
+      },
+    },
+    interest4: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [3, 500]
+      },
+    },
+    interest5: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [3, 500]
+      },
+    },
+    description: {
+      type: DataTypes.TEXT,
+    }
   });
   return Tech;
 };
