@@ -66,12 +66,46 @@ label {
 
 /* _____ INT RESULT CSS ______ */
 
-.imageDiv {
-    margin: 20px;
-    width: 32%;
-    height: 400px;
-    background-color: #1f282f;
+.ind-result {
+    margin: 20px 0px;
+    width: 100%;
+   
     border: 10px solid white, 
 }
+.imageDiv {
+    width: 100%;
+    /* height: 400px; */
+    background-color: #1f282f;
+}
 
-.nameage 
+.nameage, .location {
+    color: var(--black);
+    font-family: var(--text-font);
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.result-info-short {
+    border: 5px solid var(--grey);
+    text-align: center;
+}
+
+.result-info-short:hover {
+    border: 5px solid var(--med-pink)
+}
+
+.result-button {
+    background: var(--dark-pink);
+    color: white;
+    font-family: var(--title-font);
+    margin: 10px auto;
+    width: 40%
+}
+
+.result-button:hover {
+    background: var(--light-pink);
+    color:var(--dark-pink);
+}
+
