@@ -12,34 +12,40 @@ module.exports = function (app) {
     res.render("signup", ({ layout: "initial.handlebars" }) );
   });
 
+  //renders the trivia page
   app.get("/trivia", function(req, res) {
     res.render("initial-quiz", ({ layout: "initial.handlebars" }) );
   })
 
+  //renders the about page
   app.get("/about", function(req, res) {
     res.render("aboutapp", ({layout: 'initial.handlebars'}) );
   });
 
+  //renders the profile setup
   app.get("/profile-setup", function(req, res) {
     res.render('profile-setup', {layout: 'survey.handlebars'});
   });
 
-  app.get("/my-profile/:name", function(req, res) {
-    db.Tech.findOne({
-      where: {
-        name: req.params.name//take username from login info and match from tech db to get profile of logged in user  
-      }
-    })
+  //renders my-profile page with the data of user logged in 
+  app.get("/my-profile/", function(req, res) {
+    // db.Tech.findOne({
+    //   where: {
+    //     name: req.params.name //take username from login info and match from tech db to get profile of logged in user  
+    //   }
+    // })
     res.render('profile-page', {layout: 'main.handlebars'})
   });
 
-
+  //renders all results without filters
+  //gotta do a minus or except query
   app.get("/matches", function(req, res) {
     db.Tech.findAll({}).then(function(results) {
       res.render("results-page", {data: results});
     });
   });
 
+  //renders individual results 
   app.get("/result/profile/:id", function(req, res) {
     db.Tech.findOne({
       where: {
@@ -51,18 +57,8 @@ module.exports = function (app) {
   });
 
 
-
-  // // Load example page and pass in an example by id
-  // app.get("/example/:id", function(req, res) {
-  //   db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-  //     res.render("example", {
-  //       example: dbExample
-  //     });
-  //   });
-  // });
-
-  // // Render 404 page for any unmatched routes
-  // app.get("*", function(req, res) {
-  //   res.render("404");
-  // });
+  // Render 404 page for any unmatched routes
+  app.get("*", function(req, res) {
+    res.render("404");
+  });
 };
