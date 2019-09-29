@@ -45,8 +45,12 @@ module.exports = function(sequelize, Sequelize) {
         status: {
             type: Sequelize.ENUM('active', 'inactive'),
             defaultValue: 'active'
+        },
+
+        trivia_taken: {
+            type: Sequelize.STRING,
+            defaultValue: false,
         }
- 
  
     });
  
