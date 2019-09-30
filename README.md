@@ -1,9 +1,3 @@
-<style>
-img {
-    margin: 5px auto;
-}
-</style>
-
 # CLICK
 #### A modern day dating app that starts with the foundation of common knowledge
 
@@ -20,9 +14,23 @@ img {
 <img src="https://media.giphy.com/media/1xmlYh65ZA8rOjKwr3/giphy.gif">
 <br>
 
-* User will log in or sign up to CLICK
-* They will take a preliminary quiz of their knowledge
-* Once they pass the quiz with flying colors, users will be able to fill out their profile and set their preferences
-* Users can send connect requests and explore profiles, beginning their journey of love!
+1. User will log in or sign up to CLICK
+2. They will take a preliminary quiz of their knowledge
+3. Once they pass the quiz with flying colors, users will be able to fill out their profile and set their preferences
+4. Users can send connect requests and explore profiles, beginning their journey of love!
 
+## Technologies Used
+* Handlebars
+* Javascript
+* CSS
+* Passport
+* MySQL
+* Sequalize
+* Express/Node
+
+## The Team
+* Isabel (@ingan274)
+* Syeda (@syeda-zaidi)
+* Derek (@Lakerfan)
+* Will (@willh1980)
 
