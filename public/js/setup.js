@@ -50,15 +50,14 @@ $('.next-button').on('click', () => {
 $('.submit-button').on('click', () => {
   Event.preventDefault()
 
-  var gender = $('#gender').val()
-  var minAge = $('#ageMin').val()
-  var maxAge = $('#ageMax').val()
-  var minHFt = $('#heightFtMin').data('value')
-  var minHInch = $('#heightInchMin').data('value')
-  var maxHFt = $('#heightFtMax').data('value')
-  var maxHInch = $('#heightInchMax').data('value')
-  var location = $('#location').val()
-  var drink = $('#alcoholsearch').val()
+  var gender = $('.genderPref').val()
+  var minAge = $('.agePrefMin').val()
+  var maxAge = $('.agePrefMax').val()
+  var minHFt = $('.heightPrefMinFt').val()
+  var minHInch = $('.heightPrefMinInch').val()
+  var maxHFt = $('.heightPrefMaxFt').val()
+  var maxHInch = $('.heightPrefMaxInch').val()
+  var drink = $('alcoholPref').val()
 
   var matches = {
     gender: gender,
@@ -68,7 +67,6 @@ $('.submit-button').on('click', () => {
     minHI: minHInch,
     maxH: maxHFt,
     maxHI: maxHInch,
-    city: location,
     drink: drink
   }
 

@@ -54,8 +54,7 @@ module.exports = function (app) {
           $gte: req.body.minHI,
           $lte: req.body.maxHI,
         },
-        drinks: req.body.drinks,
-        city: req.body.city,
+        drinks: req.body.drinks
       }
     }).then(function (result) {
       // res.json(result)
