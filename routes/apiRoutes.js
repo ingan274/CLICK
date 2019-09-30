@@ -11,6 +11,7 @@ module.exports = function (app) {
   app.post("/api/userprofile", function (req, res) {
     db.Tech.create({
 
+      id: req.session.passport.user,
       firstname: req.body.firstname,
       lastname: req.body.lastname,
       age: req.body.age,

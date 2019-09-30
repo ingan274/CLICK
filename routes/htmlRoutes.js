@@ -40,7 +40,15 @@ module.exports = function (app) {
       if (result.dataValues.trivia_taken === false) {
         res.redirect("/trivia" );
       } else if (result.dataValues.trivia_taken === true) {
-        res.render('profile-page', {layout: 'main.handlebars'})
+        app.get("/api/userprofile", function(req, res) {
+          db.Tech.findOne({
+            where: {
+              id: req.session.passport.user,
+            }
+          }).then(function(profile) {
+            res.render('profile-page', {data: profile})
+          })
+        })
       }
     })
   });
