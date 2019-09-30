@@ -98,7 +98,7 @@ input:hover, textarea:hover {
   margin: 20px 10px;
 }
 
-.submit-button {
+.button {
   color: white;
   background: var(--dark-pink-half);
   border: none;

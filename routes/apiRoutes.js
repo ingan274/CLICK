@@ -59,23 +59,53 @@ module.exports = function (app) {
       }
     }).then(function (result) {
       // res.json(result)
-      res.render("results-page", {data: result})
+      res.render("results-page", { data: result })
     });
   });
 
   //updates the user table for trivia taken to true 
-  app.put("/api/trivia-taken", function(req, res) {
+  app.put("/api/matches", function (req, res) {
+    db.Tech.update(
+      res.body.data
+      , {
+        where: {
+          id: req.session.passport.user
+        }
+      }).then(function (update) {
+        res.json(update)
+      }).catch(function (err) {
+        console.log(err)
+      });
+  });
+
+
+  //updates the user table for trivia taken to true 
+  app.put("/api/trivia-taken", function (req, res) {
     db.user.update({
       trivia_taken: true
     }, {
       where: {
         id: req.session.passport.user
       }
-    }).then(function(update) {
+    }).then(function (update) {
       res.json(update)
-    }).catch(function(err) {
+    }).catch(function (err) {
       console.log(err)
     });
+  });
+
+  app.put("/api/matches/user", function (req, res) {
+    db.user.update(
+      res.body
+      , {
+        where: {
+          id: req.session.passport.user
+        }
+      }).then(function (update) {
+        res.json(update)
+      }).catch(function (err) {
+        console.log(err)
+      });
   });
 
 
