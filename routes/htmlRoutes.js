@@ -12,38 +12,6 @@ module.exports = function (app) {
     res.render("signup", ({ layout: "initial.handlebars" }));
   });
 
-<<<<<<< HEAD
-  app.get("/trivia", function (req, res) {
-    res.render("initial-quiz", ({ layout: "initial.handlebars" }));
-  })
-
-  app.get("/about", function (req, res) {
-    res.render("aboutapp", ({ layout: 'initial.handlebars' }));
-  });
-
-  app.get("/profile-setup", function (req, res) {
-    res.render('profile-setup', { layout: 'survey.handlebars' });
-  });
-
-  app.get("/my-profile/:name", function (req, res) {
-    db.Tech.findOne({
-      where: {
-        name: req.params.name//take username from login info and match from tech db to get profile of logged in user  
-      }
-    })
-    res.render('profile-page')
-  });
-
-  // all results
-  app.get("/all-matches", function (req, res) {
-    db.Tech.findAll({}).then(function (results) {
-      // console.log(results)
-      res.render("results-page", { results: results });
-    });
-  });
-
-  app.get("/result/profile/:id", function (req, res) {
-=======
   //renders the trivia page
   app.get("/trivia", function(req, res) {
     res.render("initial-quiz", ({ layout: "initial.handlebars" }) );
@@ -60,13 +28,29 @@ module.exports = function (app) {
   });
 
   //renders my-profile page with the data of user logged in 
-  app.get("/my-profile/", function(req, res) {
-    // db.Tech.findOne({
-    //   where: {
-    //     name: req.params.name //take username from login info and match from tech db to get profile of logged in user  
-    //   }
-    // })
-    res.render('profile-page', {layout: 'main.handlebars'})
+  app.get("/my-profile", function(req, res) {
+    console.log("\nreq.session.passport.user (id)" + req.session.passport.user + "\n");
+    var userId = req.session.passport.user;
+    db.user.findOne({
+      where: {
+        id: userId 
+      }
+    }).then(function(result) {
+      console.log("\ntrivia taken value : " + result.dataValues.trivia_taken + "\n");
+      if (result.dataValues.trivia_taken === false) {
+        res.redirect("/trivia" );
+      } else if (result.dataValues.trivia_taken === true) {
+        app.get("/api/userprofile", function(req, res) {
+          db.Tech.findOne({
+            where: {
+              id: req.session.passport.user,
+            }
+          }).then(function(profile) {
+            res.render('profile-page', {data: profile})
+          })
+        })
+      }
+    })
   });
 
   //renders all results without filters
@@ -79,7 +63,6 @@ module.exports = function (app) {
 
   //renders individual results 
   app.get("/result/profile/:id", function(req, res) {
->>>>>>> 58b45cc227f1db03153d2b83ea078061a387e7fe
     db.Tech.findOne({
       where: {
         id: req.params.id,

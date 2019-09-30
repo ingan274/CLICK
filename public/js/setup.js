@@ -43,10 +43,13 @@ $('.next-button').on('click', () => {
     imageurl: imageurl
   }
 
-  $.post('/api/burgers', newUser)
+  $.post('/api/userprofile', newUser)
 })
 
 // This is going to get call and go to results
 $('.submit-button').on('click', () => {
   Event.preventDefault()
+
+  //get route for all preferred matches 
+  // ( "api/matches/preferred" )
 })

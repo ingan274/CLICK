@@ -48,7 +48,7 @@ module.exports = function(sequelize, Sequelize) {
         },
 
         trivia_taken: {
-            type: Sequelize.STRING,
+            type: Sequelize.BOOLEAN,
             defaultValue: false,
         }
  
