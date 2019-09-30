@@ -17,7 +17,7 @@ module.exports = function (app) {
       gender: req.body.gender,
       heightfeet: req.body.heightfeet,
       heightinches: req.body.heightinches,
-      drinks: req.body.drinks,
+      alcohol: req.body.alcohol,
       city: req.body.city,
       state: req.body.state,
       zodiac: req.body.zodiac,
@@ -29,7 +29,7 @@ module.exports = function (app) {
       interest3: req.body.interest3,
       interest4: req.body.interest4,
       interest5: req.body.interest5,
-      description: req.body.description
+      description: req.body.description,
 
     }).then(function (dbExample) {
       res.json(dbExample);
@@ -51,7 +51,7 @@ module.exports = function (app) {
         heightinches: {
           $gte: req.body.min
         },
-        drinks: req.body.drinks,
+        alcohol: req.body.alcohol,
       }
     }).then(function (result) {
       // res.json(result)

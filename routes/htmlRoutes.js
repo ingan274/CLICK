@@ -28,13 +28,21 @@ module.exports = function (app) {
   });
 
   //renders my-profile page with the data of user logged in 
-  app.get("/my-profile/", function(req, res) {
-    // db.Tech.findOne({
-    //   where: {
-    //     name: req.params.name //take username from login info and match from tech db to get profile of logged in user  
-    //   }
-    // })
-    res.render('profile-page', {layout: 'main.handlebars'})
+  app.get("/my-profile", function(req, res) {
+    console.log("\nreq.session.passport.user (id)" + req.session.passport.user + "\n");
+    var userId = req.session.passport.user;
+    db.user.findOne({
+      where: {
+        id: userId 
+      }
+    }).then(function(result) {
+      console.log("\ntrivia taken value : " + result.dataValues.trivia_taken + "\n");
+      if (result.dataValues.trivia_taken === false) {
+        res.redirect("/trivia" );
+      } else if (result.dataValues.trivia_taken === true) {
+        res.render('profile-page', {layout: 'main.handlebars'})
+      }
+    })
   });
 
   //renders all results without filters
