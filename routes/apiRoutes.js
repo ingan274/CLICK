@@ -59,8 +59,20 @@ module.exports = function (app) {
     });
   });
 
-  
-
+  //updates the user table for trivia taken to true 
+  app.put("/api/trivia-taken", function(req, res) {
+    db.user.update({
+      trivia_taken: true
+    }, {
+      where: {
+        id: req.session.passport.user
+      }
+    }).then(function(update) {
+      res.json(update)
+    }).catch(function(err) {
+      console.log(err)
+    });
+  });
 
 
   // // Delete an example by id
