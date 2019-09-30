@@ -43,7 +43,7 @@ $('.next-button').on('click', () => {
     imageurl: imageurl
   }
 
-  $.post('/api/burgers', newUser)
+  $.post('/api/userprofile', newUser)
 })
 
 // This is going to get call and go to results
@@ -57,7 +57,7 @@ $('.submit-button').on('click', () => {
   var minHInch = $('.heightPrefMinInch').val()
   var maxHFt = $('.heightPrefMaxFt').val()
   var maxHInch = $('.heightPrefMaxInch').val()
-  var drink = $('alcoholPref').val()
+  var alcohol = $('alcoholPref').val()
 
   var matches = {
     gender: gender,
@@ -67,7 +67,7 @@ $('.submit-button').on('click', () => {
     minHI: minHInch,
     maxH: maxHFt,
     maxHI: maxHInch,
-    drink: drink
+    alcohol: alcohol
   }
 
   $.get("api/matches/preferred", matches)

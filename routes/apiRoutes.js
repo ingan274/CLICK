@@ -11,13 +11,14 @@ module.exports = function (app) {
   app.post("/api/userprofile", function (req, res) {
     db.Tech.create({
 
+      id: req.session.passport.user,
       firstname: req.body.firstname,
       lastname: req.body.lastname,
       age: req.body.age,
       gender: req.body.gender,
       heightfeet: req.body.heightfeet,
       heightinches: req.body.heightinches,
-      drinks: req.body.drinks,
+      alcohol: req.body.alcohol,
       city: req.body.city,
       state: req.body.state,
       zodiac: req.body.zodiac,
@@ -54,7 +55,7 @@ module.exports = function (app) {
           $gte: req.body.minHI,
           $lte: req.body.maxHI,
         },
-        drinks: req.body.drinks
+        alcohol: req.body.alcohol,
       }
     }).then(function (result) {
       // res.json(result)
@@ -62,8 +63,20 @@ module.exports = function (app) {
     });
   });
 
-  
-
+  //updates the user table for trivia taken to true 
+  app.put("/api/trivia-taken", function(req, res) {
+    db.user.update({
+      trivia_taken: true
+    }, {
+      where: {
+        id: req.session.passport.user
+      }
+    }).then(function(update) {
+      res.json(update)
+    }).catch(function(err) {
+      console.log(err)
+    });
+  });
 
 
   // // Delete an example by id
