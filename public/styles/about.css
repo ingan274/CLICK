@@ -129,7 +129,7 @@
   margin: 50px 0px 20px 0px;
 }
 
-.enterApp {
+.enterApp, a {
   font-family: var(--text-font);
   font-weight: 500;
   color: var(--med-pink);
@@ -142,4 +142,5 @@
   font-weight: 700;
   color: var(--dark-pink);
   font-size: 20px;
+  text-decoration: none;
 }
