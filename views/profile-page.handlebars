@@ -2,21 +2,28 @@
     res.render('profile-page', {layout: 'main.handlebars'});
 }); --}}
 
-<section class="profile container">
+<section class="container profileContainer">
     <div class="row">
         <div class="col-4" id="profileImage">
-            <img src="{{dataValues.imgsrc}}">
+            <img src="{{dataValues.imgurl}}">
         </div>
-        <div class="col-8">
-            <p class="info" id="name"><span class="infoTitle">Name: </span> {{dataValues.name}} </p>
-            <p class="info" id="age"><span class="infoTitle">Age: </span> {{dataValues.age}} </p>
-
-            {{!-- change the below to have imput field; check past HW for inline editing --}}
-            <p class="info" id="height"><span class="infoTitle">Hieght: </span> {{dataValues.height_ft}}' {{dataValues.height_inch}} '' </p>
-            <p class="info" id="location"><span class="infoTitle">Location: </span> {{dataValues.location}} {{dataValues.city}} </p>
-            <p class="info" id="drink"><span class="infoTitle">Drinking Frequence: </span> {{dataValues.drink}} </p>
+        <div class="col-7 matchInfo">
+            <p class="info col-12" id="name"><span class="infoTitle">Name: </span> {{dataValues.firstname}} {{dataValues.lastname}} </p>
+            <p class="info col-12" id="age"><span class="infoTitle">Age: </span> {{dataValues.age}} </p>
+            <p class="info col-12" id="gender"><span class="infoTitle">Gender: </span> {{dataValues.gender}} </p>
+            <p class="info col-12" id="height"><span class="infoTitle">Height: </span> {{dataValues.height_ft}}' {{dataValues.height_inch}} '' </p>
+            <p class="info col-12" id="location"><span class="infoTitle">Location: </span> {{dataValues.location}} {{dataValues.city}} </p>
+            <p class="info col-12" id="drink"><span class="infoTitle">Drinking Frequencey: </span> {{dataValues.drink}} </p>
+            <p class="info col-12" id="zodiac"><span class="infoTitle">Zodiac: </span> {{dataValues.drink}} </p>
+            <p class="info col-12" id="interest"><span class="infoTitle">Interests: </span> </p>
+            <p>	∙ {{dataValues.interest1}} </p>
+            <p>	∙ {{dataValues.interest2}} </p>
+            <p>	∙ {{dataValues.interest3}} </p>
+            <p>	∙ {{dataValues.interest4}} </p>
+            <p>	∙ {{dataValues.interest5}} </p>
         </div>
     </div>
+    <div class="decriptionTitle">{{dataValues.firstname}}'s Decription</div>
     <div class="row">
         <div class="decription">
             {{dataValues.description}}

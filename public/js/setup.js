@@ -50,6 +50,26 @@ $('.next-button').on('click', () => {
 $('.submit-button').on('click', () => {
   Event.preventDefault()
 
-  //get route for all preferred matches 
-  // ( "api/matches/preferred" )
+  var gender = $('.genderPref').val()
+  var minAge = $('.agePrefMin').val()
+  var maxAge = $('.agePrefMax').val()
+  var minHFt = $('.heightPrefMinFt').val()
+  var minHInch = $('.heightPrefMinInch').val()
+  var maxHFt = $('.heightPrefMaxFt').val()
+  var maxHInch = $('.heightPrefMaxInch').val()
+  var alcohol = $('alcoholPref').val()
+
+  var matches = {
+    gender: gender,
+    minA: minAge,
+    maxA: maxAge,
+    minH: minHFt,
+    minHI: minHInch,
+    maxH: maxHFt,
+    maxHI: maxHInch,
+    alcohol: alcohol
+  }
+
+  $.get("api/matches/preferred", matches)
+
 })

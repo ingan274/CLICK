@@ -31,6 +31,7 @@ module.exports = function (app) {
       interest4: req.body.interest4,
       interest5: req.body.interest5,
       description: req.body.description,
+      imageurl: req.body.imageurl,
 
     }).then(function (dbExample) {
       res.json(dbExample);
@@ -43,14 +44,16 @@ module.exports = function (app) {
       where: {
         gender: req.body.gender,
         age: {
-          $gte: req.body.min,
-          $lte: req.body.max,
+          $gte: req.body.minA,
+          $lte: req.body.maxA
         },
         heightfeet: {
-          $gte: req.body.min
+          $gte: req.body.minH,
+          $lte: req.body.maxH
         },
         heightinches: {
-          $gte: req.body.min
+          $gte: req.body.minHI,
+          $lte: req.body.maxHI,
         },
         alcohol: req.body.alcohol,
       }
