@@ -50,12 +50,14 @@ module.exports = function (app) {
       if (result.dataValues.trivia_taken === false) {
         res.redirect("/trivia");
       } else if (result.dataValues.trivia_taken === true) {
+        app.get("/api/userprofile", function (req, res) {
           db.Tech.findOne({
             where: {
-              userid: req.session.passport.user,
+              id: req.session.passport.user,
             }
           }).then(function (profile) {
             res.render('profile-page', profile)
+          })
         })
       }
     })
