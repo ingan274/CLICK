@@ -56,7 +56,7 @@
   padding: 40px 40px;
   width: 100%;
   height: 200px;
-  margin: 0px 20px 30px 20px;
+  margin: 0px 20px 0px 20px;
   font-family: var(--text-font);
   font-weight: 400;
   font-size: 18px;
@@ -64,7 +64,7 @@
 
 /* Profile (users) _-----------------------------------------------------------*/
 
-#edit-button {
+#edit-button-profile {
     background: var(--light-pink);
     border: none;
     color: white;
@@ -72,19 +72,20 @@
     padding: 10px 15px;
     border-radius: 10px;
     font-weight: 400;
-    font-size: 12px;
-    margin-top: 40px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 20px;
     margin-bottom: 40px;
 }
 
-#edit-button:hover {
+#edit-button-profile:hover {
   background: var(--med-pink);
   color: white;
   text-decoration: none;
 }
 
 /* Profile (users) EDITING-----------------------------------------------------------*/
-.submit-button-profile {
+#submit-button-profile {
   background: var(--light-pink);
     border: none;
     color: white;
@@ -93,13 +94,15 @@
     border-radius: 10px;
     font-weight: 400;
     font-size: 20px;
+    width: 80%;
+    text-align: center;
 
     margin: 0px auto;
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-.submit-button-profile:hover {
+#submit-button-profile:hover {
   background: var(--med-pink);
   color: white;
   text-decoration: none;

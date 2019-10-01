@@ -5,7 +5,7 @@
 <section class="container profileContainer">
     <div class="row">
         <div class="col-5" id="profileImage">
-            <img src="{{dataValues.imgurl}}">
+            <img class="profileImage" src="{{dataValues.imgurl}}">
         </div>
         <div class="col-6 myinfo">
             <p class="info " id="name-user"><span class="infoTitle">Name: </span> {{dataValues.firstname}} {{dataValues.lastname}} </p>
@@ -31,5 +31,8 @@
             {{dataValues.description}}
         </div>
     </div>
-    <a id="edit-button" href="/profile-edit">Edit Profile</a>
+     <div class="row">
+         <button id="edit-button-profile">Edit Profile</button>
+    </div>
+   
 </section>
