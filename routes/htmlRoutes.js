@@ -92,6 +92,9 @@ app.get("/matches", function (req, res) {
   db.Tech.findAll().then(function (results) {
     res.render("results-page", { results: results });
   })
+  db.Tech.findAll().then(function (results) {
+    res.render("results-page", { results: results });
+  })
 });
 
 //renders individual results 

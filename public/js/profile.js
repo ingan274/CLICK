@@ -55,10 +55,9 @@ $(document).ready(function () {
         $.ajax({
             url: "/api/profile/update",
             type: 'PUT',
-            dataType: 'json',
             data: JSON.stringify(updateProfile)
         }).then(function () {
-            location.href = "/my-profile/edit"
+            location.href = "/my-profile";
         });
     })
 })
