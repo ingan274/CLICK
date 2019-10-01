@@ -84,11 +84,12 @@ module.exports = function (app) {
 
    //updates the user info for profile to new values
    app.put("/api/profile/update", function (req, res) {
+     console.log(req.body)
     db.Tech.update(
-      res.body.data
+      req.body
       , {
         where: {
-          id: req.session.passport.user
+          userid: req.session.passport.user
         }
       }).then(function (update) {
         console.log(update)

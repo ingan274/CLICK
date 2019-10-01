@@ -28,4 +28,10 @@ $(document).ready(function () {
     $.get("api/matches/preferred", matches)
 
   })
+
+  $('.connect-button').on('click', (event) => {
+    event.preventDefault();
+
+    $('#modal-connect').modal('show')
+  })
 })

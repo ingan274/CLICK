@@ -109,3 +109,30 @@ label {
     color:var(--dark-pink);
 }
 
+
+
+/* ---------- modal */
+
+.modal-connect-header {
+    font-family: var(--title-font);
+    color: var(--dark-pink);
+    background: var(--light-pink)
+}
+
+.modal-connect-body {
+    color: var(--black);
+    font-family: var(--text-font);
+  }
+
+.modal-connect-btnClose {
+  background: var(--grey);
+  font-family: var(--title-font);
+  color: white;
+  
+}  
+
+.modal-connect-btnClose:hover {
+  background: var(--black);
+  color: var(--light-pink)
+} 
+
