@@ -9,7 +9,11 @@ $(document).ready(function () {
         var q4 = $(".qa4").val();
 
         if (q1 === 'qa1a' && q2 === 'qa2b'  && q3 === 'qa3a'  && q4 === 'qa4a') {
-            location.href = '/profile-setup'
+            location.href = '/profile-setup';
+            $.ajax({
+                url: "/api/trivia-taken",
+                type: 'PUT'
+              });
         } else {
             $('#modal-alert').modal('show')
         }
