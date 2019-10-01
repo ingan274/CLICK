@@ -83,6 +83,7 @@
         </select>
         <label for="location">Location</label>
         <select class="form-control" id="location">
+            {{!-- this needs data to pass through that is all cities listed once for drop down option --}}
             {{#each location}}
             <option>{{dataValues.city}}}</option>
             {{/each}}
