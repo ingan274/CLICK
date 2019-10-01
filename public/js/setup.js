@@ -48,7 +48,7 @@ $(document).ready(function () {
     }
 
     $.post('/api/userprofile', newUser, function (data) {
-      alert(data)
+      // alert(data)
       location.href = '/preference-setup'
     })
   })

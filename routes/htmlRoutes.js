@@ -79,7 +79,7 @@ module.exports = function (app) {
         app.get("/api/userprofile", function (req, res) {
           db.Tech.findOne({
             where: {
-              id: req.session.passport.user,
+              userid: req.session.passport.user,
             }
           }).then(function (profile) {
             res.render('profile-edit', profile)

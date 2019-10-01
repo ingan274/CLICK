@@ -32,18 +32,10 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     heightfeet: {
-      type: DataTypes.INTEGER,
-      validate: {
-        isNumeric: true,
-        isInt: true,
-      }
+      type: DataTypes.STRING,
     },
     heightinches: {
-      type: DataTypes.INTEGER,
-      validate: {
-        isNumeric: true,
-        isInt: true,
-      }
+      type: DataTypes.STRING,
     },
     drinks: {
       type: DataTypes.STRING,
@@ -54,7 +46,7 @@ module.exports = function (sequelize, DataTypes) {
     city: {
       type: DataTypes.STRING,
       validate: {
-        len: [3, 255]
+        len: [0, 255]
       }
     },
     state: {
@@ -69,9 +61,6 @@ module.exports = function (sequelize, DataTypes) {
     },
     zodiac: {
       type: DataTypes.STRING,
-      validate: {
-        is: ["^[a-z]+$", 'i'],
-      }
     },
     ethnicity: {
       type: DataTypes.STRING,
@@ -85,31 +74,31 @@ module.exports = function (sequelize, DataTypes) {
     interest1: {
       type: DataTypes.STRING,
       validate: {
-        len: [3, 500]
+        len: [0, 500]
       },
     },
     interest2: {
       type: DataTypes.STRING,
       validate: {
-        len: [3, 500]
+        len: [0, 500]
       },
     },
     interest3: {
       type: DataTypes.STRING,
       validate: {
-        len: [3, 500]
+        len: [0, 500]
       },
     },
     interest4: {
       type: DataTypes.STRING,
       validate: {
-        len: [3, 500]
+        len: [0, 500]
       },
     },
     interest5: {
       type: DataTypes.STRING,
       validate: {
-        len: [3, 500]
+        len: [0, 500]
       },
     },
     description: {
@@ -118,7 +107,7 @@ module.exports = function (sequelize, DataTypes) {
     imgurl: {
       type: DataTypes.TEXT,
       validate: {
-        len: [7, 500]
+        len: [0, 500]
       },
     }
   });
