@@ -29,7 +29,7 @@ $(document).ready(function () {
       lastname: lastname,
       age: age,
       gender: gender,
-      heightfoot: heightfoot,
+      heightfeet: heightfoot,
       heightinches: heightinch,
       city: city,
       state: state,
