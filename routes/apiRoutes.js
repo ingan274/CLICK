@@ -3,9 +3,14 @@ var db = require("../models");
 module.exports = function (app) {
   // Get all from tech table
   app.get("/api/matches", function (req, res) {
-    db.Tech.findAll({}).then(function (data) {
+    db.Tech.findAll({
+      where: {
+        userid: { $not: req.session.passport.user}
+      }
+    }).then(function (data) {
+
       res.json(data);
-      //exept the user 
+      //all matches except the user 
     });
   });
 
@@ -45,9 +50,11 @@ module.exports = function (app) {
   //get routes to filter with preferences and renders to results page 
   app.get("/api/matches/preferred", function (req, res) {
     db.Tech.findAll({
-      where: {
-        gender: req.body.gender,
-        // age: {
+      where: [{
+        gender: "male",
+        age: 18
+
+
         //   $gte: req.body.minA,
         //   $lte: req.body.maxA
         // },
@@ -60,10 +67,10 @@ module.exports = function (app) {
         //   $lte: req.body.maxHI,
         // },
         // alcohol: req.body.alcohol,
-      }
+      }]
     }).then(function (result) {
-      // res.json(result)
-      res.render("results-page", { data: result })
+      res.json(result)
+      // res.render("results-page", { data: result })
     });
   });
 
@@ -81,6 +88,7 @@ module.exports = function (app) {
         console.log(err)
       });
   });
+
 
    //updates the user info for profile to new values
    app.put("/api/profile/update", function (req, res) {
