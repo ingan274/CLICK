@@ -34,3 +34,167 @@
   background: var(--black);
   color: var(--light-pink)
 }  
+
+/*Initial Quiz CSS*/
+
+* {
+	margin: 0
+}
+
+html, body {
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto;
+	height: 100%;
+	margin: 0 auto -109px;
+}
+
+
+/* declarations for html on page */
+body {
+	background: url('../images/background_image.jpg') #ffffff; 
+	margin: 0px;
+	padding: 0px;
+
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 18px;
+	color: #777777;
+}
+
+a {
+	color: #9999A5;
+	text-decoration: none;
+}
+
+h1 {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+	font-weight: bold;
+	font-size: 30px;
+    color: salmon;
+    text-align: center;
+}
+
+h2 {
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	font-weight: bold;
+	font-size: 30px;
+    color: salmon;
+    text-align: center;
+}
+
+/* declarations for header */
+header {
+	background: #ffffff;
+	border-bottom: 2px solid #cccccc;
+}
+
+#header_block {
+	width: 960px;
+	height: 90px;
+	margin: 0px auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav_vertical_bar {
+	background: #efefef;
+	width: 1px; 
+	height: 100%;
+}
+
+
+/* declarations for main section */
+#main_block {
+	width: 960px;
+	margin: 10px auto;
+    /*display: flex;*/
+	justify-content: space-between;
+}
+
+p {
+    float: left;
+}
+
+section, aside {
+	background: #ffffff;
+	border: 3px solid grey;
+	width: 960px;
+    padding: 40px 30px 30px 30px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+section p {
+	line-height: 190%;
+}
+
+#section_grey_line {
+	background: grey;
+	height: 3px;
+	margin: 30px 0 20px 0;
+}
+
+/*declarations for footer*/
+/*#footer_line {
+	background: salmon;
+	height: 5px;
+    margin: 30px 0 20px 0;
+}*/
+.push {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    margin: 30px 0 20px 20;
+    width: 100%;
+    background-color: salmon;
+    color: white;
+    text-align: center;
+  }
+
+  .button {
+    border-radius: 4px;
+    background-color: salmon;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    /*padding: 20px;*/
+    padding: 10px 25px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  input.input-box, textarea { background:beige;
+}
