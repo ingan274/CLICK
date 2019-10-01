@@ -13,13 +13,13 @@ module.exports = function (app) {
   });
 
   //renders the trivia page
-  app.get("/trivia", function(req, res) {
-    res.render("initial-quiz", ({ layout: "initial.handlebars" }) );
+  app.get("/trivia", function (req, res) {
+    res.render("initial-quiz", ({ layout: "initial.handlebars" }));
   })
 
   //renders the about page
-  app.get("/about", function(req, res) {
-    res.render("aboutapp", ({layout: 'initial.handlebars'}) );
+  app.get("/about", function (req, res) {
+    res.render("aboutapp", ({ layout: 'initial.handlebars' }));
   });
 
   //renders the profile setup
@@ -32,20 +32,21 @@ module.exports = function (app) {
       // }).then(function(profile) {
         // res.render('profile-page', {data: profile})
     res.render('profile-setup', {layout: 'survey.handlebars'});
+
   });
 
   //renders my-profile page with the data of user logged in 
-  app.get("/my-profile", function(req, res) {
+  app.get("/profile", function (req, res) {
     console.log("\nreq.session.passport.user (id)" + req.session.passport.user + "\n");
     var userId = req.session.passport.user;
     db.user.findOne({
       where: {
-        id: userId 
+        id: userId
       }
-    }).then(function(result) {
+    }).then(function (result) {
       console.log("\ntrivia taken value : " + result.dataValues.trivia_taken + "\n");
       if (result.dataValues.trivia_taken === false) {
-        res.redirect("/trivia" );
+        res.redirect("/trivia");
       } else if (result.dataValues.trivia_taken === true) {
             res.redirect("/profile-setup");
           }
@@ -56,27 +57,27 @@ module.exports = function (app) {
 
   //renders all results without filters
   //gotta do a minus or except query
-  app.get("/matches", function(req, res) {
-    db.Tech.findAll({}).then(function(results) {
-      res.render("results-page", {data: results});
+  app.get("/matches", function (req, res) {
+    db.Tech.findAll({}).then(function (results) {
+      res.render("results-page", { data: results });
     });
   });
 
   //renders individual results 
-  app.get("/result/profile/:id", function(req, res) {
+  app.get("/result/profile/:id", function (req, res) {
     db.Tech.findOne({
       where: {
         id: req.params.id,
       },
     }).then(function (result) {
       console.log(result)
-      res.render('results-profile', {data: result})
+      res.render('results-profile', { data: result })
     });
   });
 
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.render("404");
   });
 };
