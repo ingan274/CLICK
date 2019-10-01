@@ -11,7 +11,7 @@ module.exports = function (app) {
   app.post("/api/userprofile", function (req, res) {
     db.Tech.create({
 
-      id: req.session.passport.user,
+      userid: req.session.passport.user,
       firstname: req.body.firstname,
       lastname: req.body.lastname,
       age: req.body.age,
@@ -23,7 +23,7 @@ module.exports = function (app) {
       state: req.body.state,
       zodiac: req.body.zodiac,
       ethnicity: req.body.ethnicity,
-      job: req.body.job,
+      jobposition: req.body.jobposition,
       company: req.body.company,
       interest1: req.body.interest1,
       interest2: req.body.interest2,
@@ -33,8 +33,8 @@ module.exports = function (app) {
       description: req.body.description,
       imageurl: req.body.imageurl,
 
-    }).then(function (dbExample) {
-      res.json(dbExample);
+    }).then(function (newuser) {
+      res.json(newuser);
     });
   });
 
