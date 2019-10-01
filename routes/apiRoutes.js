@@ -5,13 +5,14 @@ module.exports = function (app) {
   app.get("/api/matches", function (req, res) {
     db.Tech.findAll({}).then(function (data) {
       res.json(data);
+      //exept the user 
     });
   });
 
   app.post("/api/userprofile", function (req, res) {
     db.Tech.create({
 
-      id: req.session.passport.user,
+      // id: req.session.passport.user,
       firstname: req.body.firstname,
       lastname: req.body.lastname,
       age: req.body.age,
@@ -39,27 +40,27 @@ module.exports = function (app) {
   });
 
   //get routes to filter with preferences and renders to results page 
-  app.get("api/matches/preferred", function (req, res) {
+  app.get("/api/matches/preferred", function (req, res) {
     db.Tech.findAll({
       where: {
         gender: req.body.gender,
-        age: {
-          $gte: req.body.minA,
-          $lte: req.body.maxA
-        },
-        heightfeet: {
-          $gte: req.body.minH,
-          $lte: req.body.maxH
-        },
-        heightinches: {
-          $gte: req.body.minHI,
-          $lte: req.body.maxHI,
-        },
-        alcohol: req.body.alcohol,
+        // age: {
+        //   $gte: req.body.minA,
+        //   $lte: req.body.maxA
+        // },
+        // heightfeet: {
+        //   $gte: req.body.minH,
+        //   $lte: req.body.maxH
+        // },
+        // heightinches: {
+        //   $gte: req.body.minHI,
+        //   $lte: req.body.maxHI,
+        // },
+        // alcohol: req.body.alcohol,
       }
     }).then(function (result) {
-      // res.json(result)
-      res.render("results-page", {data: result})
+      res.json(result)
+      // res.render("results-page", {data: result})
     });
   });
 
@@ -78,6 +79,17 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/api/authdata", function(req, res) {
+    db.user.findAll({
+      where: {
+        id: req.session.passport.user
+      }
+    }).then(function (result) {
+      res.json(result);
+      console.log(req.session.passport)
+      console.log(result[0].dataValues)
+    });
+  });
 
   // // Delete an example by id
   // app.delete("/api/examples/:id", function(req, res) {
