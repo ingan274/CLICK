@@ -53,6 +53,8 @@ $(document).ready(function () {
       imageurl: imageurl
     }
 
+    console.log(newUser)
+
     $.post('/api/userprofile', newUser, function (data) {
       // alert(data)
       location.href = '/preference-setup'
