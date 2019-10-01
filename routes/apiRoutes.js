@@ -11,7 +11,6 @@ module.exports = function (app) {
 
   app.post("/api/userprofile", function (req, res) {
     db.Tech.create({
-
       userid: req.session.passport.user,
       firstname: req.body.firstname,
       lastname: req.body.lastname,
@@ -35,8 +34,11 @@ module.exports = function (app) {
       imageurl: req.body.imageurl,
 
     }).then(function (newuser) {
-      console.log("posted New User")
+      console.log("posted New User");
       res.json(newuser);
+    }).catch(function (err) {
+      console.log(err)
+      res.sendStatus(500);
     });
   });
 
@@ -80,6 +82,21 @@ module.exports = function (app) {
       });
   });
 
+   //updates the user info for trivia taken to true 
+   app.put("/api/matches/user", function (req, res) {
+    db.Tech.update(
+      res.body
+      , {
+        where: {
+          id: req.session.passport.user
+        }
+      }).then(function (update) {
+        res.json(update)
+      }).catch(function (err) {
+        console.log(err)
+      });
+  });
+
 
   //updates the user table for trivia taken to true 
   app.put("/api/trivia-taken", function (req, res) {
@@ -96,7 +113,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/api/authdata", function(req, res) {
+  app.get("/api/authdata", function (req, res) {
     db.user.findAll({
       where: {
         id: req.session.passport.user

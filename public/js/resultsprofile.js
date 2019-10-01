@@ -1,7 +1,8 @@
-// on-click listener for viewing person profile
-$('.submit-button').on('click', () => {
-    Event.preventDefault()
-  
+$(document).ready(function () {
+  // on-click listener for viewing person profile
+  $('.submit-button').on('click', (event) => {
+    event.preventDefault()
+
     var gender = $('#gender').val()
     var minAge = $('#ageMin').val()
     var maxAge = $('#ageMax').val()
@@ -11,7 +12,7 @@ $('.submit-button').on('click', () => {
     var maxHInch = $('#heightInchMax').data('value')
     var location = $('#location').val()
     var drink = $('#alcoholsearch').val()
-  
+
     var matches = {
       gender: gender,
       minA: minAge,
@@ -23,7 +24,8 @@ $('.submit-button').on('click', () => {
       city: location,
       drink: drink
     }
-  
+
     $.get("api/matches/preferred", matches)
-  
+
   })
+})
