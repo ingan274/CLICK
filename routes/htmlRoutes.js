@@ -80,7 +80,7 @@ module.exports = function (app) {
               id: req.session.passport.user,
             }
           }).then(function(profile) {
-            res.render('profile-page', profile)
+            res.render('profile-edit', profile)
           })
         })
       }
