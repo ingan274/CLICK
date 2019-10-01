@@ -63,11 +63,11 @@ input:hover, textarea:hover {
 }
 
 .nameInput {
-  width:180px;
+  width:160px;
 }
 
 .ethnicityInput {
-  width: 110px;
+  width: 150px;
 }
 
 .jobInput{
@@ -79,7 +79,11 @@ input:hover, textarea:hover {
 }
 
 .locationInput {
-  width:220px;
+  width:200px;
+}
+
+.zodiacInput, .alcoholInput {
+  width:150px;
 }
 
 .interestInput {

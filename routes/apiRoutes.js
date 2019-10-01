@@ -5,13 +5,14 @@ module.exports = function (app) {
   app.get("/api/matches", function (req, res) {
     db.Tech.findAll({}).then(function (data) {
       res.json(data);
+      //exept the user 
     });
   });
 
   app.post("/api/userprofile", function (req, res) {
     db.Tech.create({
 
-      id: req.session.passport.user,
+      userid: req.session.passport.user,
       firstname: req.body.firstname,
       lastname: req.body.lastname,
       age: req.body.age,
@@ -23,7 +24,7 @@ module.exports = function (app) {
       state: req.body.state,
       zodiac: req.body.zodiac,
       ethnicity: req.body.ethnicity,
-      job: req.body.job,
+      jobposition: req.body.jobposition,
       company: req.body.company,
       interest1: req.body.interest1,
       interest2: req.body.interest2,
@@ -33,29 +34,30 @@ module.exports = function (app) {
       description: req.body.description,
       imageurl: req.body.imageurl,
 
-    }).then(function (dbExample) {
-      res.json(dbExample);
+    }).then(function (newuser) {
+      console.log("posted New User")
+      res.json(newuser);
     });
   });
 
   //get routes to filter with preferences and renders to results page 
-  app.get("api/matches/preferred", function (req, res) {
+  app.get("/api/matches/preferred", function (req, res) {
     db.Tech.findAll({
       where: {
         gender: req.body.gender,
-        age: {
-          $gte: req.body.minA,
-          $lte: req.body.maxA
-        },
-        heightfeet: {
-          $gte: req.body.minH,
-          $lte: req.body.maxH
-        },
-        heightinches: {
-          $gte: req.body.minHI,
-          $lte: req.body.maxHI,
-        },
-        alcohol: req.body.alcohol,
+        // age: {
+        //   $gte: req.body.minA,
+        //   $lte: req.body.maxA
+        // },
+        // heightfeet: {
+        //   $gte: req.body.minH,
+        //   $lte: req.body.maxH
+        // },
+        // heightinches: {
+        //   $gte: req.body.minHI,
+        //   $lte: req.body.maxHI,
+        // },
+        // alcohol: req.body.alcohol,
       }
     }).then(function (result) {
       // res.json(result)
@@ -94,20 +96,17 @@ module.exports = function (app) {
     });
   });
 
-  app.put("/api/matches/user", function (req, res) {
-    db.user.update(
-      res.body
-      , {
-        where: {
-          id: req.session.passport.user
-        }
-      }).then(function (update) {
-        res.json(update)
-      }).catch(function (err) {
-        console.log(err)
-      });
+  app.get("/api/authdata", function(req, res) {
+    db.user.findAll({
+      where: {
+        id: req.session.passport.user
+      }
+    }).then(function (result) {
+      res.json(result);
+      console.log(req.session.passport)
+      console.log(result[0].dataValues)
+    });
   });
-
 
   // // Delete an example by id
   // app.delete("/api/examples/:id", function(req, res) {
