@@ -2,10 +2,11 @@ $(document).ready(function () {
     // on-click listener for submiting initial quiz
     $(".initial-quiz-submit").on("click", (event) => {
         event.preventDefault()
-        var q1 = $(".qa1").data('value');
-        var q2 = $(".qa2").data('value');
-        var q3 = $(".qa3").data('value');
-        var q4 = $(".qa4").data('value');
+        var q1 = $(".qa1").val();
+        console.log(q1)
+        var q2 = $(".qa2").val();
+        var q3 = $(".qa3").val();
+        var q4 = $(".qa4").val();
 
         if (q1 === 'qa1a' && q2 === 'qa2b'  && q3 === 'qa3a'  && q4 === 'qa4a') {
             location.href = '/profile-setup'
