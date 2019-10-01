@@ -82,15 +82,16 @@ module.exports = function (app) {
       });
   });
 
-   //updates the user info for trivia taken to true 
-   app.put("/api/matches/user", function (req, res) {
+   //updates the user info for profile to new values
+   app.put("/api/profile/update", function (req, res) {
     db.Tech.update(
-      res.body
+      res.body.data
       , {
         where: {
           id: req.session.passport.user
         }
       }).then(function (update) {
+        console.log(update)
         res.json(update)
       }).catch(function (err) {
         console.log(err)
