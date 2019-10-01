@@ -12,7 +12,7 @@
             <!--<input type="text" name="firstname" class="input-box" style="width: 300px;">-->
             <p>Question: Which of these statements are incorrect?</p>
 
-            <select name="statement" style="width:400px;height:40px;">
+            <select name="statement" class="qa1" style="width:400px;height:40px;">
                 <option value="qa1a">a) Every class must contain a main() method</option>
                 <option value="qa1b">b) Applets do not require a main() method at all</option>
                 <option value="qa1c">c) There can be only one main() method in a program</option>
@@ -22,7 +22,7 @@
             <div id="section_grey_line"></div>
             <p>Question: Which of the following is an event emitter?</p>
 
-            <select name="valid" style="width:400px;height:40px;">
+            <select name="valid" class="qa2" style="width:400px;height:40px;">
                 <option value="qa2a">a) once</option>
                 <option value="qa2b">b) process</option>
                 <option value="qa2c">c) listeners</option>
@@ -32,7 +32,7 @@
             <div id="section_grey_line"></div>
             <p>Question: Which method can be defined only once in a program?</p>
 
-            <select name="method" style="width:400px;height:40px;">
+            <select name="method" class="qa3" style="width:400px;height:40px;">
                 <option value="qa3a">a) main method</option>
                 <option value="qa3b">b) finalize method</option>
                 <option value="qa3c">c) static method</option>
@@ -42,7 +42,7 @@
             <div id="section_grey_line"></div>
             <p>Question: What is the method used to pause "data" events?</p>
 
-            <select name="cars" style="width:400px;height:40px;">
+            <select name="cars" class="qa4" style="width:400px;height:40px;">
                 <option value="qa4a">a) s.pause();</option>
                 <option value="qa4b">b) s.stop();</option>
                 <option value="qa4c">c) s.halt();</option>
@@ -50,8 +50,32 @@
             </select>
             <br>
             <div id="section_grey_line"></div>
-            <button class="button"><span>Submit</span></button>
+            <button class="button initial-quiz-submit"><span>Submit</span></button>
             <!--<input type="submit">-->
         </form>
     </section>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-alert" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-alert-title">Oops! Looks like you didn't answer the quick correctly.
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                CLICK is building a community that allows you to find your "click" within industries that you are
+                knowledgable about. With our unique entry quiz is the spring board to finding love. Looks like you might
+                not be the right fit. <br> <br> Please try again.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary modal-btnClose" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>

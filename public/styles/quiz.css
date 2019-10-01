@@ -9,4 +9,28 @@
     --med-pink: #d57a77;
     --dark-pink: #923226;
   }
+
+  /* modal */
+
+  .modal-header {
+    font-family: var(--title-font);
+    color: var(--dark-pink);
+    background: var(--light-pink)
+  }
   
+  .modal-body {
+    color: var(--black);
+    font-family: var(--text-font);
+  }
+
+.modal-btnClose {
+  background: var(--grey);
+  font-family: var(--title-font);
+  color: white;
+  
+}  
+
+.modal-btnClose:hover {
+  background: var(--black);
+  color: var(--light-pink)
+}  
