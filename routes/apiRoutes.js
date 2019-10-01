@@ -16,7 +16,7 @@ module.exports = function (app) {
       lastname: req.body.lastname,
       age: req.body.age,
       gender: req.body.gender,
-      heightfeet: req.body.heightfeet,
+      heightfoot: req.body.heightfoot,
       heightinches: req.body.heightinches,
       alcohol: req.body.alcohol,
       city: req.body.city,
