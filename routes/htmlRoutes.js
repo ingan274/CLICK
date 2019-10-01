@@ -29,6 +29,7 @@ module.exports = function (app) {
 
   //renders the profile setup
   app.get("/profile-setup", function (req, res) {
+    console.log(req.session)
     res.render('profile-setup', { layout: 'survey.handlebars' });
   });
 

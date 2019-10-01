@@ -23,7 +23,7 @@
 }
 
 .profileImage {
-  object-fit: contain;
+  height: 570px;
 }
 
 .matchInfo, .myinfo {
