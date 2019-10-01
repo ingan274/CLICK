@@ -55,7 +55,7 @@ $(document).ready(function () {
 
   // This is going to get call and go to results
   $('.submit-button').on('click', (event) => {
-    Event.preventDefault()
+    event.preventDefault()
 
     var gender = $('.genderPref').val()
     var minAge = $('.agePrefMin').val()
