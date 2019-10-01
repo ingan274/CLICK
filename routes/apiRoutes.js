@@ -3,9 +3,14 @@ var db = require("../models");
 module.exports = function (app) {
   // Get all from tech table
   app.get("/api/matches", function (req, res) {
-    db.Tech.findAll({}).then(function (data) {
+    db.Tech.findAll({
+      where: {
+        userid: { $not: req.session.passport.user}
+      }
+    }).then(function (data) {
+
       res.json(data);
-      //exept the user 
+      //all matches except the user 
     });
   });
 
