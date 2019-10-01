@@ -64,7 +64,7 @@ module.exports = function (app) {
   });
 
   app.get("/my-profile/edit", function (req, res) {
-    res.render('profile-setup')
+    res.render('profile-edit')
   });
 
   //renders all results without filters
