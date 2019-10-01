@@ -23,18 +23,16 @@ module.exports = function (app) {
   });
 
   //renders the profile setup
-  app.get("/profile-setup", function (req, res) {
+  app.get("/profile-setup", function(req, res) {
     // app.get("/api/userprofile", function(req, res) {
-    // db.Tech.findOne({
-    //   where: {
-    //     userid: req.session.passport.user,
-    //   }
-    // }).then(function(profile) {
-    //if ()
-    // res.render('profile-page', {data: profile})
-    // })
-    // })
-    res.render('profile-setup', { layout: 'survey.handlebars' });
+    //   db.Tech.findOne({
+    //     where: {
+    //       id: req.session.passport.user,
+    //     }
+      // }).then(function(profile) {
+        // res.render('profile-page', {data: profile})
+    res.render('profile-setup', {layout: 'survey.handlebars'});
+
   });
 
   //renders my-profile page with the data of user logged in 
@@ -50,10 +48,12 @@ module.exports = function (app) {
       if (result.dataValues.trivia_taken === false) {
         res.redirect("/trivia");
       } else if (result.dataValues.trivia_taken === true) {
-        res.redirect("/profile-setup")
-      }
-    })
-  });
+            res.redirect("/profile-setup");
+          }
+        })
+      });
+    // })
+  // });
 
   //renders all results without filters
   //gotta do a minus or except query
