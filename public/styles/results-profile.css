@@ -17,12 +17,16 @@
 
 /* VISUAL */
 #profileImage {
-  border: 5px solid var(--light-pink);
+  /* border: 5px solid var(--light-pink); */
   margin: 10px 25px;
-  height: 470px;
+  height: 570px;
 }
 
-.matchInfo {
+.profileImage {
+  object-fit: contain;
+}
+
+.matchInfo, .myinfo {
   margin: 20px 20px;
   padding: 30px 30px;
   border: 5px solid var(--med-pink);
@@ -47,8 +51,8 @@
   font-size: 30px;
 }
 
-.decription {
-  background: var(--grey);
+.description {
+  border: 5px solid var(--grey);
   padding: 40px 40px;
   width: 100%;
   height: 200px;
@@ -56,4 +60,57 @@
   font-family: var(--text-font);
   font-weight: 400;
   font-size: 18px;
+}
+
+/* Profile (users) _-----------------------------------------------------------*/
+
+#edit-button {
+    background: var(--light-pink);
+    border: none;
+    color: white;
+    font-family: var(--title-font);
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#edit-button:hover {
+  background: var(--med-pink);
+  color: white;
+  text-decoration: none;
+}
+
+/* Profile (users) EDITING-----------------------------------------------------------*/
+.submit-button-profile {
+  background: var(--light-pink);
+    border: none;
+    color: white;
+    font-family: var(--title-font);
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 20px;
+
+    margin: 0px auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.submit-button-profile:hover {
+  background: var(--med-pink);
+  color: white;
+  text-decoration: none;
+}
+
+.profiledescinput {
+  border: none;
+  width: 100%
+}
+
+.profileinput, .selectprofile {
+  border: 2px solid var(--light-pink);
+  width: 100%
 }

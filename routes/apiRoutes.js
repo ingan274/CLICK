@@ -35,6 +35,7 @@ module.exports = function (app) {
       imageurl: req.body.imageurl,
 
     }).then(function (newuser) {
+      console.log("posted New User")
       res.json(newuser);
     });
   });
@@ -59,22 +60,38 @@ module.exports = function (app) {
         // alcohol: req.body.alcohol,
       }
     }).then(function (result) {
-      res.json(result)
-      // res.render("results-page", {data: result})
+      // res.json(result)
+      res.render("results-page", { data: result })
     });
   });
 
   //updates the user table for trivia taken to true 
-  app.put("/api/trivia-taken", function(req, res) {
+  app.put("/api/matches", function (req, res) {
+    db.Tech.update(
+      res.body.data
+      , {
+        where: {
+          id: req.session.passport.user
+        }
+      }).then(function (update) {
+        res.json(update)
+      }).catch(function (err) {
+        console.log(err)
+      });
+  });
+
+
+  //updates the user table for trivia taken to true 
+  app.put("/api/trivia-taken", function (req, res) {
     db.user.update({
       trivia_taken: true
     }, {
       where: {
         id: req.session.passport.user
       }
-    }).then(function(update) {
+    }).then(function (update) {
       res.json(update)
-    }).catch(function(err) {
+    }).catch(function (err) {
       console.log(err)
     });
   });

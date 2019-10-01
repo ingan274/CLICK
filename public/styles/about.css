@@ -121,8 +121,9 @@
 
 /* ----footer----- */
 
-.socialFooter {
+.joinFooter {
   text-align: center;
+  margin-bottom: 100px;
 }
 .joinClick {
   width: 400px;

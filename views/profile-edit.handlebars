@@ -1,0 +1,115 @@
+{{!-- router.get('/my-profile', function(req, res) {
+    res.render('my-profile/edit', {layout: 'main.handlebars'});
+}); --}}
+
+<section class="container profileContainer">
+    <div class="row">
+        <div class="col-5" id="profileImage">
+            <img src="{{dataValues.imgurl}}">
+        </div>
+        <form class="col-6 myinfo">
+            <p class="info " id="name-user"><span class="infoTitle">Name: </span> {{dataValues.firstname}}
+                {{dataValues.lastname}} </p>
+            <p class="info " id="age-user"><span class="infoTitle">Age: </span> {{dataValues.age}} </p>
+            <p class="info " id="gender-user"><span class="infoTitle">Gender: </span>
+                <select class="form genderUpdate">
+                    <option value="{{dataValues.gender}}" select>{{dataValues.gender}}</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="transgender">Transgender</option>
+                    <option value="other">Other</option>
+                </select> </p>
+            <p class="info " id="ethnicity-user"><span class="infoTitle">Ethnicity: </span>
+                <input type="text" name="ethnicity" class="input-box ethnicityUpdate profileinput" value="{{dataValues.ethnicity}}"
+                    placeholder="{{dataValues.ethnicity}}">
+            </p>
+            <p class="info " id="height-user"><span class="infoTitle">Height: </span>
+                <select class="heightUpdateFt form prefDrop selectprofile">
+                    <option value="{{dataValues.height_ft}}'">{{dataValues.height_ft}}'</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+                <select class="heightUpdateInch form prefDrop selectprofile">
+                    <option value="  {{dataValues.height_inch}} ''"> {{dataValues.height_inch}} ''</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                </select>
+            </p>
+            <p class="info " id="location-user"><span class="infoTitle">Location: </span>
+                <input type="text" name="locationCity" placeholder="{{dataValues.city}}" class="profileinput input-box cityUpdate "
+                    data-value="{{dataValues.city}}">
+                <input type="text" name="locationState" class="input-box stateUpdate profileinput"
+                    placeholder="{{dataValues.state}}" data-value="{{dataValues.state}}">
+            </p>
+            <p class="info " id="job-user"><span class="infoTitle">Job: </span> <input type="text" name="job-position"
+                    class="input-box  positionUpdate profileinput" placeholder=" {{dataValues.job}}" data-value="{{dataValues.job}}">
+                at
+                <input type="text" name="job-company" class="input-box  companyUpdate profileinput"
+                    placeholder="{{dataValues.company}}" data-value="{{dataValues.company}}">
+            </p>
+            <p class="info " id="drink-user"><span class="infoTitle">Drinking Frequency: </span>
+                <select class="form alcoholUpdate selectprofile">
+                    <option selected value="{{dataValues.drinks}}">{{dataValues.drinks}}</option>
+                    <option value="never">Never</option>
+                    <option value="occasionally">Occasionally</option>
+                    <option value="socially">Socially</option>
+                    <option value="all_day_everyday">All Day Everyday</option>
+                </select>
+            </p>
+            <p class="info " id="zodiac-user"><span class="infoTitle">Zodiac: </span>
+                <select class="form zodiacUpdate selectprofile">
+                    <option selected value="{{dataValues.zodiac}}">{{dataValues.zodiac}}</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Taurus">Taurus</option>
+                    <option value="Gemini">Gemini</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Scorpio">Scorpio</option>
+                    <option value="Sagittarius">Sagittarius</option>
+                    <option value="Capricorn">Capricorn</option>
+                    <option value="Aquarius">Aquarius</option>
+                    <option value="Pisces">Pisces</option>
+                </select> </p>
+            <p class="info " id="interest-user"><span class="infoTitle">Interests: </span> </p>
+            <p> ∙ <input type="text" name="input1" id="input1update" class="input-box interestInput profileinput"
+                    placeholder="{{dataValues.interest1}}" data-value="{{dataValues.interest1}}"> </p>
+            <p> ∙ <input type="text" name="input2" id="input2update" class="input-box interestInput profileinput"
+                    placeholder="{{dataValues.interest2}}" data-value="{{dataValues.interest2}}"> </p>
+            <p> ∙ <input type="text" name="input3" id="input3update" class="input-box interestInput profileinput"
+                    placeholder="{{dataValues.interest3}}" data-value="{{dataValues.interest3}}"> </p>
+            <p> ∙ <input type="text" name="input4" id="input4update" class="input-box interestInput profileinput"
+                    placeholder="{{dataValues.interest4}}" data-value="{{dataValues.interest4}}"> </p>
+            <p> ∙ <input type="text" name="input5" id="input5update" class="input-box interestInput profileinput"
+                    placeholder="{{dataValues.interest5}}" data-value="{{dataValues.interest5}}"> </p>
+            <p class="label">Profile Image Link:</p>
+            <input type="info" name="imageURL" class="input-box imageurlupdate profileinput" placeholder="http://"
+                data-value="{{dataValues.imgurl}}">
+        </form>
+       
+    </div>
+    <div class=" decriptionTitle">About Me
+    </div>
+    <div class="row">
+        <div class="description ">
+            <textarea rows="4" cols="50"
+                placeholder="{{dataValues.description}}"
+                class="shortDescInput profiledescinput" maxlength="600"></textarea>
+        </div>
+    </div>
+    <a id="submit-button-profile" class="submit-button-profile" href="/my-profile">Submit</a>
+</section>

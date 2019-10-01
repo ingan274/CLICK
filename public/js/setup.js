@@ -1,12 +1,15 @@
 // This is going to post info and make animation
-$('.next-button').on('click', () => {
+$('#next-button-setup').on('click', () => {
   Event.preventDefault()
 
+  alert("button was clicked")
   // below is for the post call
   var firstname = $('.firstNameInput').val().trim()
   var lastname = $('.lastNameInput').val().trim()
   var age = $('.ageInput').val().trim()
   var gender = $('.genderInput').val()
+  var heightfoot = $('.heightInputFt').val()
+  var heightinch = $('.heightInputInch').val()
   var alcohol = $('.alcoholInput').val()
   var zodiac = $('.zodiacInput').val()
   var city = $('.cityInput').val().trim()
@@ -27,6 +30,8 @@ $('.next-button').on('click', () => {
     lastname: lastname,
     age: age,
     gender: gender,
+    heightfoot: heightfoot,
+    heightinch: heightinch,
     city: city,
     state: state,
     alcohol: alcohol,
@@ -43,7 +48,9 @@ $('.next-button').on('click', () => {
     imageurl: imageurl
   }
 
-  $.post('/api/userprofile', newUser)
+  $.post('/api/userprofile', newUser, function() {
+    window.location.href='/preference-setup'
+  })
 })
 
 // This is going to get call and go to results

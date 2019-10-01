@@ -4,18 +4,20 @@
 
 <section class="container profileContainer">
     <div class="row">
-        <div class="col-4" id="profileImage">
+        <div class="col-5" id="profileImage">
             <img src="{{dataValues.imgurl}}">
         </div>
-        <div class="col-7 matchInfo">
-            <p class="info col-12" id="name"><span class="infoTitle">Name: </span> {{dataValues.firstname}} {{dataValues.lastname}} </p>
-            <p class="info col-12" id="age"><span class="infoTitle">Age: </span> {{dataValues.age}} </p>
-            <p class="info col-12" id="gender"><span class="infoTitle">Gender: </span> {{dataValues.gender}} </p>
-            <p class="info col-12" id="height"><span class="infoTitle">Height: </span> {{dataValues.height_ft}}' {{dataValues.height_inch}} '' </p>
-            <p class="info col-12" id="location"><span class="infoTitle">Location: </span> {{dataValues.location}} {{dataValues.city}} </p>
-            <p class="info col-12" id="drink"><span class="infoTitle">Drinking Frequencey: </span> {{dataValues.drink}} </p>
-            <p class="info col-12" id="zodiac"><span class="infoTitle">Zodiac: </span> {{dataValues.drink}} </p>
-            <p class="info col-12" id="interest"><span class="infoTitle">Interests: </span> </p>
+        <div class="col-6 myinfo">
+            <p class="info " id="name-user"><span class="infoTitle">Name: </span> <span class="edit"{{dataValues.firstname}} {{dataValues.lastname}} </p>
+            <p class="info " id="age-user"><span class="infoTitle">Age: </span> {{dataValues.age}} </p>
+            <p class="info " id="gender-user"><span class="infoTitle">Gender: </span> {{dataValues.gender}} </p>
+            <p class="info " id="ethnicity-user"><span class="infoTitle">Ethnicity: </span> {{dataValues.ethnicity}} </p>
+            <p class="info " id="height-user"><span class="infoTitle">Height: </span> {{dataValues.height_ft}}' {{dataValues.height_inch}} '' </p>
+            <p class="info " id="location-user"><span class="infoTitle">Location: </span> {{dataValues.location}} {{dataValues.city}} </p>
+            <p class="info " id="job-user"><span class="infoTitle">Job: </span> {{dataValues.job}} at {{dataValues.company}} </p>
+            <p class="info " id="drink-user"><span class="infoTitle">Drinking Frequency: </span> {{dataValues.drinks}} </p>
+            <p class="info " id="zodiac-user"><span class="infoTitle">Zodiac: </span> {{dataValues.zodiac}} </p>
+            <p class="info " id="interest-user"><span class="infoTitle">Interests: </span> </p>
             <p>	∙ {{dataValues.interest1}} </p>
             <p>	∙ {{dataValues.interest2}} </p>
             <p>	∙ {{dataValues.interest3}} </p>
@@ -23,10 +25,11 @@
             <p>	∙ {{dataValues.interest5}} </p>
         </div>
     </div>
-    <div class="decriptionTitle">{{dataValues.firstname}}'s Decription</div>
+    <div class="decriptionTitle">About Me</div>
     <div class="row">
-        <div class="decription">
+        <div class="description">
             {{dataValues.description}}
         </div>
     </div>
+    <a id="edit-button" href="/profile-edit">Edit Profile</a>
 </section>

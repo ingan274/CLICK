@@ -8,11 +8,11 @@
             <h2 class="profileSetUp-Title">About You</h2>
 
             <div class="section">
-                <div class="form-row">
+                <div class="form-row row">
                     <p class="label">First Name:</p>
-                    <input type="text" name="firstname" class="input-box firstNameInput">
+                    <input type="text" name="firstname" class="input-box firstNameInput nameInput">
                     <p class="label">Last Name:</p>
-                    <input type="text" name="lastname" class="input-box lastNameInput ">
+                    <input type="text" name="lastname" class="input-box lastNameInput nameInput">
 
                     <p class="label">Age:</p>
                     <input type="text" name="age" class="input-box ageInput">
@@ -24,13 +24,36 @@
                         <option value="transgender">Transgender</option>
                         <option value="other">Other</option>
                     </select>
-                </div>
-                <div class="form-row">
+               
+                    <p class="label ">Height:</p>
+                    <select class="heightInputFt form prefDrop">
+                        <option value="feet">(ft)</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                    <select class="heightInputInch form prefDrop">
+                        <option value="inches">(in)</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                    </select>
                     <p class="label">Location:</p>
                     <input type="text" name="locationCity" placeholder="City" class="input-box locationInput cityInput">
-                    <input type="text" name="locationState" placeholder="State" class="input-box locationInput stateInput">
+                    <input type="text" name="locationState" placeholder="State"
+                        class="input-box locationInput stateInput">
                     <br>
-
                     <p class="label">Alcohol Consumption:</p>
                     <select class="form alcoholInput">
                         <option selected>Select Frequency</option>
@@ -39,11 +62,9 @@
                         <option value="socially">Socially</option>
                         <option value="all_day_everyday">All Day Everyday</option>
                     </select>
-                </div>
-                <div class="form-row">
                     <p class="label">Zodiac: </p>
                     <select class="form zodiacInput">
-                        <option selected>Select Zodiace</option>
+                        <option selected>Select Zodiac</option>
                         <option value="Aries">Aries</option>
                         <option value="Taurus">Taurus</option>
                         <option value="Gemini">Gemini</option>
@@ -59,14 +80,14 @@
                     </select>
                     <p class="label">Ethnicity: </p>
                     <input type="text" name="ethnicity" class="input-box ethnicityInput">
-
+              
                     <p class="label">Job Position:</p>
                     <input type="text" name="job-position" class="input-box jobInput positionInput">
 
                     <p class="label">Company:</p>
                     <input type="text" name="job-company" class="input-box jobInput companyInput">
-                </div>
 
+                </div>
                 <div class="form-row">
                     <p class="label">Interests: </p>
 
@@ -92,115 +113,7 @@
                     <input type="text" name="imageURL" class="input-box imageurl" placeholder="http://">
                 </div>
             </div>
-            <button class="button next-button">Next</button>
-            <!--<input type="submit">-->
-        </form>
-        <form  class="labelTitle">
-            {{!-- action="/" --}}
-            {{!-- PREFERENCE QUIZ BELOW --}}
-            <h2 class="profileSetUp-Title">Preferences</h2>
-            <div class="section">
-                <p class="label">Gender:</p>
-                <select class="genderPref form prefDrop">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="transgender">Transgender</option>
-                    <option value="other">Other</option>
-                </select>
-                <p class="label ">Age:</p>
-                <select class="agePrefMin form prefDrop">
-                    <option value="minimum">Min</option>
-                    <option value="eighteen">18</option>
-                    <option value="twenty_five">25</option>
-                    <option value="thirty_two">32</option>
-                    <option value="thirty_nine">39</option>
-                    <option value="forty_six">46</option>
-                    <option value="fifty_three">53</option>
-                    <option value="sixty">60</option>
-                    <option value="sixty_seven">67</option>
-                    <option value="seventy_four">74</option>
-                    <option value="eighty_one">81</option>
-                    <option value="eighty_eight">88</option>
-                    <option value="one_hundred">100</option>
-                </select>
-                <select class="agePrefMax form prefDrop">
-                    <option value="maximum">Max</option>
-                    <option value="twenty_four">24</option>
-                    <option value="thirty_one">31</option>
-                    <option value="thirty_eight">38</option>
-                    <option value="forty_five">45</option>
-                    <option value="fifty_two">52</option>
-                    <option value="fifty_nine">59</option>
-                    <option value="sixty_six">66</option>
-                    <option value="seventy_three">73</option>
-                    <option value="eighty">80</option>
-                    <option value="eighty_seven">87</option>
-                    <option value="ninty_four">94</option>
-                    <option value="one_hundred_plus">100+</option>
-                </select>
-
-                <p class="label">Height:</p>
-                <div class="form-row">
-                    <p class="label heightLabel">Minimum:</p>
-                    <select class="heightPrefMinFt form prefDrop">
-                        <option value="feet">(ft)</option>
-                        <option value="four">4</option>
-                        <option value="five">5</option>
-                        <option value="six">6</option>
-                        <option value="seven">7</option>
-                        <option value="eight">8</option>
-                    </select>
-                    <select class="heightPrefMinInch form prefDrop">
-                        <option value="inches">(in)</option>
-                        <option value="zero">0</option>
-                        <option value="one">1</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5</option>
-                        <option value="six">6</option>
-                        <option value="seven">7</option>
-                        <option value="eight">8</option>
-                        <option value="nine">9</option>
-                        <option value="eleven">10</option>
-                        <option value="twelve">11</option>
-                    </select>
-                    <br>
-                    <p class="label heightLabel">Maximum:</p>
-                    <select class="heightPrefMaxFt form prefDrop">
-                        <option value="feet">(ft)</option>
-                        <option value="four">4</option>
-                        <option value="five">5</option>
-                        <option value="six">6</option>
-                        <option value="seven">7</option>
-                        <option value="eight">8</option>
-                    </select>
-                    <select class="heightPrefMaxInch form prefDrop">
-                        <option value="inches">(in)</option>
-                        <option value="zero">0</option>
-                        <option value="one">1</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5</option>
-                        <option value="six">6</option>
-                        <option value="seven">7</option>
-                        <option value="eight">8</option>
-                        <option value="nine">9</option>
-                        <option value="eleven">10</option>
-                        <option value="twelve">11</option>
-                    </select>
-                </div>
-                <p class="label"> Alcohol Consumption:</p>
-                <select class="alcoholPref form prefDrop">
-                    <option value="never">Never</option>
-                    <option value="occasionally">Occasionally</option>
-                    <option value="socially">Socially</option>
-                    <option value="all_day_everyday">All Day Everyday</option>
-                </select>
-            </div>
-            <button class="button submit-button">Submit</button>
-            <!--<input type="submit">-->
+            <button class="button next-button-setup">Next</button>
         </form>
     </section>
 </div>

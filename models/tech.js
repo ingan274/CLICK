@@ -114,6 +114,12 @@ module.exports = function (sequelize, DataTypes) {
     },
     description: {
       type: DataTypes.TEXT,
+    },
+    imgurl: {
+      type: DataTypes.TEXT,
+      validate: {
+        len: [7, 500]
+      },
     }
   });
   return Tech;
