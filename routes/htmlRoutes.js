@@ -82,9 +82,10 @@ module.exports = function (app) {
   //gotta do a minus or except query
   app.get("/matches", function (req, res) {
     db.Tech.findAll({
-      // where: {
-      //   userid: { $ne : req.session.passport.user }
-      // }
+      where: 
+        {through:
+          { userid: req.session.passport.user}
+      }
     }).then(function (results) {
       res.render("results-page", { results: results });
     })
