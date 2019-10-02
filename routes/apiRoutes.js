@@ -1,11 +1,16 @@
 var db = require("../models");
 
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+
 module.exports = function (app) {
   // Get all from tech table
   app.get("/api/matches", function (req, res) {
     db.Tech.findAll({
       where: {
-        userid: { $not: req.session.passport.user }
+      userid: {
+        [Op.ne]: req.session.passport.user
+      }
       }
     }).then(function (data) {
 
@@ -49,11 +54,13 @@ module.exports = function (app) {
   //get routes to filter with preferences and renders to results page 
   app.get("/api/matches/preferred", function (req, res) {
     db.Tech.findAll({
-      where: [{
-        gender: "male",
-        age: 18
-
-
+      where: {
+        gender: "female",
+        Age: {
+          [Op.gt]: 18
+          // [Op.between]: [18, 24]
+        }
+              }
         //   $gte: req.body.minA,
         //   $lte: req.body.maxA
         // },
@@ -66,7 +73,6 @@ module.exports = function (app) {
         //   $lte: req.body.maxHI,
         // },
         // alcohol: req.body.alcohol,
-      }]
     }).then(function (result) {
       res.json(result)
       // res.render("results-page", { data: result })
