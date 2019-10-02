@@ -56,8 +56,8 @@ $(document).ready(function () {
     // console.log(newUser)
 
     $.post('/api/userprofile', newUser, function (data) {
-      console.log(data)
-      // location.href = '/preference-setup'
+      // console.log(data)
+      location.href = '/preference-setup'
     })
   })
 
