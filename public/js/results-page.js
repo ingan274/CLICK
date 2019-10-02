@@ -27,6 +27,4 @@ $('.submit-button').on('click', (event) => {
     $.get("api/matches/preferred", matches, function(results) {
       console.log(results)
     })
-
-  })
 })
