@@ -22,7 +22,6 @@
 
 .about-header {
   background-image: linear-gradient(to bottom, #f0cecdd0, #f0cecd80), url("../imgs/coffee.jpg");
-  height: 600px;
   background-size: cover;
   background-position: center;
   text-align: center;
