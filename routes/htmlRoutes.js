@@ -63,36 +63,52 @@ module.exports = function (app) {
   });
 
   app.get("/my-profile/edit", function (req, res) {
-    res.render('profile-edit')
-
+    console.log("\nreq.session.passport.user (id)" + req.session.passport.user + "\n");
+    var userId = req.session.passport.user;
+    db.user.findOne({
+      where: {
+        id: userId
+      }
+    }).then(function (result) {
+      console.log("\ntrivia taken value : " + result.dataValues.trivia_taken + "\n");
+      if (result.dataValues.trivia_taken === false) {
+        res.redirect("/trivia");
+      } else if (result.dataValues.trivia_taken === true) {
+        db.Tech.findOne({
+          where: {
+            userid: req.session.passport.user,
+          }
+        }).then(function (profile) {
+          // console.log(profile)
+          res.render('profile-edit', profile)
+        })
+      }
+    })
   });
 
-//renders all results without filters
-//gotta do a minus or except query
-app.get("/matches", function (req, res) {
-  db.Tech.findAll().then(function (results) {
-    res.render("results-page", { results: results });
-  })
-  db.Tech.findAll().then(function (results) {
-    res.render("results-page", { results: results });
-  })
-});
-
-//renders individual results 
-app.get("/result/profile/:id", function (req, res) {
-  db.Tech.findOne({
-    where: {
-      id: req.params.id,
-    },
-  }).then(function (result) {
-    console.log(result)
-    res.render('result-profile', result)
+  //renders all results without filters
+  //gotta do a minus or except query
+  app.get("/matches", function (req, res) {
+    db.Tech.findAll().then(function (results) {
+      res.render("results-page", { results: results });
+    })
   });
-});
+
+  //renders individual results 
+  app.get("/result/profile/:id", function (req, res) {
+    db.Tech.findOne({
+      where: {
+        id: req.params.id,
+      },
+    }).then(function (result) {
+      console.log(result)
+      res.render('result-profile', result)
+    });
+  });
 
 
-// Render 404 page for any unmatched routes
-app.get("*", function (req, res) {
-  res.render("404");
-});
+  // Render 404 page for any unmatched routes
+  app.get("*", function (req, res) {
+    res.render("404");
+  });
 };

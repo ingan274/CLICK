@@ -22,7 +22,13 @@ $(document).ready(function () {
     var interest4 = $('#input4').val().trim()
     var interest5 = $('#input5').val().trim()
     var description = $('.shortDescInput').val().trim()
-    var imageurl = $('.imageurl').val().trim()
+    var imageurl;
+    
+    if ($('.imageurl').val().trim().length < 0) {
+      imageurl = $('.imageurl').val().trim()
+    } else {
+      imageurl = "/imgs/no-image-image.png"
+    }
 
     var newUser = {
       firstname: firstname,
@@ -46,6 +52,8 @@ $(document).ready(function () {
       description: description,
       imageurl: imageurl
     }
+
+    console.log(newUser)
 
     $.post('/api/userprofile', newUser, function (data) {
       // alert(data)
