@@ -21,14 +21,14 @@ module.exports = function (app) {
       lastname: req.body.lastname,
       age: req.body.age,
       gender: req.body.gender,
-      heightfoot: req.body.heightfoot,
+      heightfeet: req.body.heightfeet,
       heightinches: req.body.heightinches,
-      alcohol: req.body.alcohol,
+      drinks: req.body.alcohol,
       city: req.body.city,
       state: req.body.state,
       zodiac: req.body.zodiac,
       ethnicity: req.body.ethnicity,
-      jobposition: req.body.jobposition,
+      job: req.body.jobposition,
       company: req.body.company,
       interest1: req.body.interest1,
       interest2: req.body.interest2,
@@ -36,7 +36,7 @@ module.exports = function (app) {
       interest4: req.body.interest4,
       interest5: req.body.interest5,
       description: req.body.description,
-      imageurl: req.body.imageurl,
+      imgurl: req.body.imgurl,
 
     }).then(function (newuser) {
       console.log("posted New User");

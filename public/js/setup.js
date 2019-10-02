@@ -50,13 +50,13 @@ $(document).ready(function () {
       interest4: interest4,
       interest5: interest5,
       description: description,
-      imageurl: imageurl
+      imgurl: imageurl
     }
 
-    console.log(newUser)
+    // console.log(newUser)
 
     $.post('/api/userprofile', newUser, function (data) {
-      // alert(data)
+      // console.log(data)
       location.href = '/preference-setup'
     })
   })
