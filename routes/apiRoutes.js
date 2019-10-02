@@ -5,7 +5,7 @@ module.exports = function (app) {
   app.get("/api/matches", function (req, res) {
     db.Tech.findAll({
       where: {
-        userid: { $not: req.session.passport.user}
+        userid: { $not: req.session.passport.user }
       }
     }).then(function (data) {
 
@@ -36,8 +36,7 @@ module.exports = function (app) {
       interest4: req.body.interest4,
       interest5: req.body.interest5,
       description: req.body.description,
-      imgurl: req.body.imgurl,
-
+      imgurl: req.body.imgurl
     }).then(function (newuser) {
       console.log("posted New User");
       res.json(newuser);
@@ -80,7 +79,7 @@ module.exports = function (app) {
       res.body.data
       , {
         where: {
-          id: req.session.passport.user
+          userid: req.session.passport.user
         }
       }).then(function (update) {
         res.json(update)
@@ -90,11 +89,10 @@ module.exports = function (app) {
   });
 
 
-   //updates the user info for profile to new values
-   app.put("/api/profile/update", function (req, res) {
-     console.log(req.body)
+  //updates the user info for profile to new values
+  app.put("/api/profile/update", function (req, res) {
     db.Tech.update(
-      req.body
+      res.body.data
       , {
         where: {
           userid: req.session.passport.user
@@ -104,6 +102,7 @@ module.exports = function (app) {
         res.json(update)
       }).catch(function (err) {
         console.log(err)
+        res.sendStatus(505)
       });
   });
 
