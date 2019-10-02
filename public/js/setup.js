@@ -23,7 +23,7 @@ $(document).ready(function () {
     var interest5 = $('#input5').val().trim()
     var description = $('.shortDescInput').val().trim()
     var imageurl;
-    
+
     if ($('.imageurl').val().trim().length < 0) {
       imageurl = $('.imageurl').val().trim()
     } else {
@@ -84,8 +84,11 @@ $(document).ready(function () {
       maxHI: maxHInch,
       alcohol: alcohol
     }
-
-    $.get("api/matches/preferred", matches)
+    console.log(matches.gender);
+    $.get("api/matches/preferred", matches, function(results) {
+      // res.render("results-page", {data: results})
+      console.log(results)
+    })
 
   })
 })
