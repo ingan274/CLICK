@@ -9,15 +9,15 @@
 
             <div class="section">
                 <div class="form-row row">
-                    <p class="label">First Name:</p>
+                    <p class="label">First Name:*</p>
                     <input type="text" name="firstname" class="input-box firstNameInput nameInput">
-                    <p class="label">Last Name:</p>
+                    <p class="label">Last Name:*</p>
                     <input type="text" name="lastname" class="input-box lastNameInput nameInput">
 
-                    <p class="label">Age:</p>
+                    <p class="label">Age:*</p>
                     <input type="text" name="age" class="input-box ageInput">
 
-                    <p class="label">Gender:</p>
+                    <p class="label">Gender:*</p>
                     <select class="form genderInput">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -25,7 +25,7 @@
                         <option value="Other">Other</option>
                     </select>
 
-                    <p class="label ">Height:</p>
+                    <p class="label ">Height:*</p>
                     <select class="heightInputFt form prefDrop">
                         <option value="5">(ft)</option>
                         <option value="4">4</option>
@@ -49,7 +49,7 @@
                         <option value="10">10</option>
                         <option value="11">11</option>
                     </select>
-                    <p class="label">Location:</p>
+                    <p class="label">Location:*</p>
                     <input type="text" name="locationCity" placeholder="City" class="input-box locationInput cityInput">
                     <input type="text" name="locationState" placeholder="State"
                         class="input-box locationInput stateInput">
@@ -110,10 +110,12 @@
                 </div>
                 <div class="form-row">
                     <p class="label">Profile Image Link:</p>
-                    <input type="text" name="imageURL" class="input-box imageurl" placeholder="http://" data-value="/imgs/no-image-image">
+                    <input type="text" name="imageURL" class="input-box imageurl" placeholder="http://"
+                        data-value="/imgs/no-image-image">
                 </div>
             </div>
             <button class="button" id="next-button-setup">Next</button>
+    <p class="profile-setup-note">* Required Field</p>
         </form>
     </section>
 </div>

@@ -72,7 +72,8 @@ $(document).ready(function () {
     var minHInch = $('.heightPrefMinInch').val()
     var maxHFt = $('.heightPrefMaxFt').val()
     var maxHInch = $('.heightPrefMaxInch').val()
-    var alcohol = $('alcoholPref').val()
+    var alcohol = $('.alcoholPref').val()
+    var state = $('.location').val()
 
     var matches = {
       gender: gender,
@@ -82,11 +83,11 @@ $(document).ready(function () {
       minHI: minHInch,
       maxH: maxHFt,
       maxHI: maxHInch,
-      alcohol: alcohol
+      alcohol: alcohol,
+      state: state
     }
-    console.log(matches.gender);
+    
     $.get("api/matches/preferred", matches, function(results) {
-      // res.render("results-page", {data: results})
       console.log(results)
     })
 

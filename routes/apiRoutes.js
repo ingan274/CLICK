@@ -54,24 +54,32 @@ module.exports = function (app) {
   app.get("/api/matches/preferred", function (req, res) {
    
     console.log("gender req : "+ req.body.gender);
+    var ageMin = parseInt(req.body.minA);
+    var ageMax = parseInt(req.body.maxA);
+    var heightMinFt = parseInt(req.body.minH);
+    var heightMaxFt = parseInt(req.body.maxH);
+    var heightMinInch = parseInt(req.body.minHI);
+    var heightMaxInch = parseInt(req.body.maxHI);
+
     db.Tech.findAll({
       where: {
         gender: req.body.gender,
         // age: {
-        //   [Op.between]: [26, 33],
+        //   [Op.between]: [ageMin, ageMax],
         // },
         // heightfeet: {
-        //   [Op.between]: [5, 6],
+        //   [Op.between]: [heightMinFt, heightMaxFt],
         // },
         // heightinches: {
-        //   [Op.between]: [0, 11],
+        //   [Op.between]: [heightMinInch, heightMinInch],
         // },
         // drinks: req.body.alcohol,
+        // state: req.body.state
       }
       }).then(function (result) {
         // console.log(result);
         res.json(result)
-        // res.render("results-page", { data: result })
+        // res.render("results-page", { results: result })
       });
   });
 
