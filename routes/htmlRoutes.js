@@ -37,6 +37,11 @@ module.exports = function (app) {
     res.render('preference-setup', { layout: 'survey.handlebars' });
   });
 
+  //renders the Image and setup messages (NOT FUNCTIONING)
+  app.get("/my-messages", function (req, res) {
+    res.render('messages');
+  });
+
   //renders my-profile page with the data of user logged in 
   app.get("/my-profile", function (req, res) {
     console.log("\nreq.session.passport.user (id)" + req.session.passport.user + "\n");
