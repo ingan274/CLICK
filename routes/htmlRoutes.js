@@ -1,4 +1,6 @@
 var db = require("../models");
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 module.exports = function (app) {
 
@@ -82,9 +84,11 @@ module.exports = function (app) {
   //gotta do a minus or except query
   app.get("/matches", function (req, res) {
     db.Tech.findAll({
-      // where: {
-      //   userid: { $ne : req.session.passport.user }
-      // }
+      where: {
+      userid: {
+        [Op.ne]: req.session.passport.user
+      }
+      }
     }).then(function (results) {
       res.render("results-page", { results: results });
     })
