@@ -23,7 +23,7 @@ $(document).ready(function () {
     var interest5 = $('#input5').val().trim()
     var description = $('.shortDescInput').val().trim()
     var imageurl;
-    
+
     if ($('.imageurl').val().trim().length < 0) {
       imageurl = $('.imageurl').val().trim()
     } else {
@@ -72,7 +72,8 @@ $(document).ready(function () {
     var minHInch = $('.heightPrefMinInch').val()
     var maxHFt = $('.heightPrefMaxFt').val()
     var maxHInch = $('.heightPrefMaxInch').val()
-    var alcohol = $('alcoholPref').val()
+    var alcohol = $('.alcoholPref').val()
+    var state = $('.location').val()
 
     var matches = {
       gender: gender,
@@ -82,10 +83,13 @@ $(document).ready(function () {
       minHI: minHInch,
       maxH: maxHFt,
       maxHI: maxHInch,
-      alcohol: alcohol
+      alcohol: alcohol,
+      state: state
     }
-
-    $.get("api/matches/preferred", matches)
+    
+    $.get("api/matches/preferred", matches, function(results) {
+      console.log(results)
+    })
 
   })
 })

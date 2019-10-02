@@ -1,16 +1,20 @@
 var db = require("../models");
 
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+
 module.exports = function (app) {
-  // Get all from tech table
+  // Get all from tech table except the user
   app.get("/api/matches", function (req, res) {
     db.Tech.findAll({
       where: {
-        userid: { $not: req.session.passport.user }
+        userid: {
+          [Op.ne]: req.session.passport.user
+        }
       }
     }).then(function (data) {
 
       res.json(data);
-      //all matches except the user 
     });
   });
 
@@ -48,29 +52,35 @@ module.exports = function (app) {
 
   //get routes to filter with preferences and renders to results page 
   app.get("/api/matches/preferred", function (req, res) {
+   
+    console.log("gender req : "+ req.body.gender);
+    var ageMin = parseInt(req.body.minA);
+    var ageMax = parseInt(req.body.maxA);
+    var heightMinFt = parseInt(req.body.minH);
+    var heightMaxFt = parseInt(req.body.maxH);
+    var heightMinInch = parseInt(req.body.minHI);
+    var heightMaxInch = parseInt(req.body.maxHI);
+
     db.Tech.findAll({
-      where: [{
-        gender: "male",
-        age: 18
-
-
-        //   $gte: req.body.minA,
-        //   $lte: req.body.maxA
+      where: {
+        gender: req.body.gender,
+        // age: {
+        //   [Op.between]: [ageMin, ageMax],
         // },
         // heightfeet: {
-        //   $gte: req.body.minH,
-        //   $lte: req.body.maxH
+        //   [Op.between]: [heightMinFt, heightMaxFt],
         // },
         // heightinches: {
-        //   $gte: req.body.minHI,
-        //   $lte: req.body.maxHI,
+        //   [Op.between]: [heightMinInch, heightMinInch],
         // },
-        // alcohol: req.body.alcohol,
-      }]
-    }).then(function (result) {
-      res.json(result)
-      // res.render("results-page", { data: result })
-    });
+        // drinks: req.body.alcohol,
+        // state: req.body.state
+      }
+      }).then(function (result) {
+        // console.log(result);
+        res.json(result)
+        // res.render("results-page", { results: result })
+      });
   });
 
   //updates the user table for trivia taken to true 

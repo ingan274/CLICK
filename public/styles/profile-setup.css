@@ -127,3 +127,9 @@ input:hover, textarea:hover {
   background: var(--dark-pink);
 }
 
+.profile-setup-note {
+  font-family: var(--text-font);
+  font-size: 13px;
+  font-weight: 400;
+}
+
