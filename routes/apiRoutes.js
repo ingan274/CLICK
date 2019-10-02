@@ -91,8 +91,10 @@ module.exports = function (app) {
 
   //updates the user info for profile to new values
   app.put("/api/profile/update", function (req, res) {
+    // console.log('req',req.body)
+    var updates = req.body
     db.Tech.update(
-      res.body.data
+      updates
       , {
         where: {
           userid: req.session.passport.user
