@@ -107,7 +107,7 @@ module.exports = function (sequelize, DataTypes) {
     imgurl: {
       type: DataTypes.TEXT,
       validate: {
-        len: [0, 500]
+        len: [0, 800]
       },
     }
   });

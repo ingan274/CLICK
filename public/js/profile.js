@@ -12,50 +12,46 @@ $(document).ready(function () {
         var ethnicity = $('.ethnicityUpdate').val()
         var heightFt = $('.heightUpdateFt').val()
         var heightInch = $('.heightUpdateInch').val()
-        var city = $('.cityUpdate').val().trim()
-        var state = $('.stateUpdate').val().trim()
-        var job = $('.positionUpdate').val().trim()
-        var company = $('.companyUpdate').val().trim()
+        var city = $('.cityUpdate').val()
+        var state = $('.stateUpdate').val()
+        var job = $('.positionUpdate').val()
+        var company = $('.companyUpdate').val()
         var alcohol = $('.alcoholUpdate').val()
         var zodiac = $('.zodiacUpdate').val()
-        var interest1 = $('#input1update').val().trim()
-        var interest2 = $('#input2update').val().trim()
-        var interest3 = $('#input3update').val().trim()
-        var interest4 = $('#input4update').val().trim()
-        var interest5 = $('#input5update').val().trim()
-        var imgurl = $('.imageurlupdate').val().trim()
-
-        // function update(updatedValue) {
-        //     if (updatedValue.length === 0) {
-        //         updatedValue = $(this).data("value");
-        //     }
-        // }
+        var interest1 = $('#input1update').val()
+        var interest2 = $('#input2update').val()
+        var interest3 = $('#input3update').val()
+        var interest4 = $('#input4update').val()
+        var interest5 = $('#input5update').val()
+        var imgurl = $('.imageurlupdate').val()
+        var description = $('.profiledescinput').val()
 
         var updateProfile = {
             gender: gender,
             ethnicity: ethnicity,
             heightfeet: heightFt,
-            hieghtinch: heightInch,
+            hieghtinches: heightInch,
             city: city,
             state: state,
             job: job,
             company: company,
-            alcohol: alcohol,
+            drinks: alcohol,
             zodiac: zodiac,
             interest1: interest1,
             interest2: interest2,
             interest3: interest3,
             interest4: interest4,
             interest5: interest5,
-            imgurl: imgurl
+            imgurl: imgurl,
+            description: description
         }
-
-        console.log(updateProfile)
+        
+        // console.log(updateProfile)
 
         $.ajax({
             url: "/api/profile/update",
             type: 'PUT',
-            data: JSON.stringify(updateProfile)
+            data: updateProfile
         }).then(function () {
             location.href = "/my-profile";
         });
