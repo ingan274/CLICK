@@ -120,7 +120,8 @@ label {
 .modal-connect-header {
     font-family: var(--title-font);
     color: var(--dark-pink);
-    background: var(--light-pink)
+    background: var(--light-pink);
+    padding: 20px 20px;
 }
 
 .modal-connect-body {
