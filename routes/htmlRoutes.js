@@ -63,33 +63,24 @@ module.exports = function (app) {
   });
 
   app.get("/my-profile/edit", function (req, res) {
-    console.log("\nreq.session.passport.user (id)" + req.session.passport.user + "\n");
-    var userId = req.session.passport.user;
-    db.user.findOne({
+    db.Tech.findOne({
       where: {
-        id: userId
+        userid: req.session.passport.user,
       }
-    }).then(function (result) {
-      console.log("\ntrivia taken value : " + result.dataValues.trivia_taken + "\n");
-      if (result.dataValues.trivia_taken === false) {
-        res.redirect("/trivia");
-      } else if (result.dataValues.trivia_taken === true) {
-        db.Tech.findOne({
-          where: {
-            userid: req.session.passport.user,
-          }
-        }).then(function (profile) {
-          // console.log(profile)
-          res.render('profile-edit', profile)
-        })
-      }
+    }).then(function (profile) {
+      // console.log(profile)
+      res.render('profile-edit', profile)
     })
   });
 
   //renders all results without filters
   //gotta do a minus or except query
   app.get("/matches", function (req, res) {
-    db.Tech.findAll().then(function (results) {
+    db.Tech.findAll({
+      // where: {
+      //   userid: { $ne : req.session.passport.user }
+      // }
+    }).then(function (results) {
       res.render("results-page", { results: results });
     })
   });
