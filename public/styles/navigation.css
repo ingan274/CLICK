@@ -32,7 +32,7 @@ body {
     font-family: var(--title-font);
     font-weight: 400;
     color: var(--grey);
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .nav-link:hover {
