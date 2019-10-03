@@ -14,6 +14,11 @@ module.exports = function (app) {
     res.render("signup", ({ layout: "initial.handlebars" }));
   });
 
+  //on click leads to select interest
+  app.get("/interest", function (req, res) {
+    res.render("category", ({ layout: "initial.handlebars" }));
+  });
+
   //renders the trivia page
   app.get("/trivia", function (req, res) {
     res.render("initial-quiz", ({ layout: "initial.handlebars" }));

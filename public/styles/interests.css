@@ -1,0 +1,33 @@
+:root {
+    --title-font: 'Rubik', sans-serif;
+    /* weight: 400,500,900 */
+    --text-font: 'Cormorant', serif;
+    /* weight: 400, 400i, 500, 700 */
+    --black: #1f282f;
+    --grey: #7e8891;
+    --light-pink: #f0cecd;
+    --med-pink: #d57a77;
+    --dark-pink: #923226;
+  }
+
+.sectionbutton {
+    width: 40%;
+    height: 150px;
+    margin: 30px auto;
+    background: var(--med-pink);
+    padding: 30px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-family: var(--title-font);
+    color: white;
+    font-size: 25px;
+}
+
+.sectionbutton:hover {
+    background: var(--dark-pink);
+}
+
+.comingSoon {
+    font-family: var(--text-font);
+    color: var(--light-pink)
+}
