@@ -39,11 +39,6 @@ module.exports = function (app) {
     res.render('profile-setup', { layout: 'survey.handlebars' });
   });
 
-  //renders the preference setup
-  app.get("/preference-setup", function (req, res) {
-    res.render('preference-setup', { layout: 'survey.handlebars' });
-  });
-
   //renders the Image and setup messages (NOT FUNCTIONING)
   app.get("/my-messages", function (req, res) {
     res.render('messages');
