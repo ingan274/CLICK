@@ -10,20 +10,21 @@
     --dark-pink: #923226;
 }
 
-.formDiv {
+.formDivResults {
     background: var(--light-pink);
     font-family: var(--text-font);
     font-weight: 700;
     font-size: 14px;
     text-align: center;
-    padding: 20px 20px;
+    padding: 20px 40px;
 }
 
 
-label {
-    padding-left: 20px;
+.resultformtitle {
+    padding-left: 10px;
+    margin: 0px auto;
 }
-.form-control {
+.resultspg{
     margin: 10px auto;
     border: 1px solid var(--dark-pink);
     background: rgba(255, 255, 255, 0.493);
@@ -47,7 +48,7 @@ label {
     height: 30px;
 }
 
-#submit-button {
+#sbmt-btn-results-pg {
     margin: 10px auto;
     width: 33%;
     height: 30px;
@@ -59,7 +60,7 @@ label {
     font-size: 13px;
 }
 
-#submit-button:hover {
+#sbmt-btn-results-pg:hover {
     background: var(--dark-pink);
 }
 
@@ -67,19 +68,21 @@ label {
 /* _____ INT RESULT CSS ______ */
 
 .ind-result {
-    margin: 20px 0px;
+    margin: 20px 0px 0px 0px;
     width: 100%;
-   
-    border: 10px solid white, 
+    border-radius: 15px;
+    border: 10px solid white;
+    background:#7e889180;
 }
-.imageDiv {
-    width: 100%;
-    /* height: 400px; */
-    background-color: var(--light-pink);
+
+.ind-result:hover {
+    background:#7e88918e;
 }
 
 .resultImage{
     width: 100%;
+    border-radius: 5px;
+    margin: 10px auto;
 }
 
 .nameage, .location {
@@ -92,12 +95,11 @@ label {
 }
 
 .result-info-short {
-    border: 5px solid var(--grey);
+    border: 5px solid rgba(255, 255, 255, 0.94);
+    background:rgba(255, 255, 255, 0.95);
     text-align: center;
-}
-
-.result-info-short:hover {
-    border: 5px solid var(--med-pink)
+    border-radius: 5px;
+    margin-bottom: 20px
 }
 
 .result-button {

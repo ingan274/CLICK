@@ -62,7 +62,7 @@ $(document).ready(function () {
   })
 
   // This is going to get call and go to results
-  $('.submit-button').on('click', (event) => {
+  $('.submit-button-pref').on('click', (event) => {
     event.preventDefault()
 
     var gender = $('.genderPref').val()
@@ -86,9 +86,11 @@ $(document).ready(function () {
       alcohol: alcohol,
       state: state
     }
-    
+    // console.log(matches)
+
     $.get("api/matches/preferred", matches, function(results) {
       console.log(results)
+      location.href = '/matches'
     })
 
   })

@@ -1,16 +1,17 @@
-// This is going to get call and go to results
-$('.submit-button').on('click', (event) => {
+$(document).ready(function () {
+  // This is going to get call and go to results
+  $('#sbmt-btn-results-pg').on('click', (event) => {
     event.preventDefault()
 
-    var gender = $('#genderRslt').val()
-    var minAge = $('#ageMinRslt').val()
-    var maxAge = $('#ageMaxRslt').val()
-    var state = $('#locationRslt').val()
-    var minHFt = $('#heightFtMinRslt').val()
-    var minHInch = $('#heightInchMinRslt').val()
-    var maxHFt = $('#heightFtMaxRslt').val()
-    var maxHInch = $('#heightInchMaxRslt').val()
-    var alcohol = $('#alcoholsearchRslt').val()
+    var gender = $('.genderPref').val()
+    var minAge = $('.agePrefMin').val()
+    var maxAge = $('.agePrefMax').val()
+    var minHFt = $('.heightPrefMinFt').val()
+    var minHInch = $('.heightPrefMinInch').val()
+    var maxHFt = $('.heightPrefMaxFt').val()
+    var maxHInch = $('.heightPrefMaxInch').val()
+    var alcohol = $('.alcoholPref').val()
+    var state = $('.locationPref').val()
 
     var matches = {
       gender: gender,
@@ -23,8 +24,10 @@ $('.submit-button').on('click', (event) => {
       alcohol: alcohol,
       state: state
     }
-    console.log(matches.gender);
+    
+    // console.log(matches);
     $.get("api/matches/preferred", matches, function(results) {
       console.log(results)
     })
-})
+  })
+});

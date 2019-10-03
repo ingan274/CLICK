@@ -2,87 +2,90 @@
     res.render('results-page', {layout: 'main.handlebars'});
 }); --}}
 
-<div class="container formDiv">
+<div class="container formDivResults">
     <form class="form-inline">
-        <label for="gender">Gender: </label>
-        <select class="form-control resultspg" id="gender genderRslt">
-            <option selected>Select</option>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Transgender</option>
-            <option>Other</option>
+        <label for="gender" class="resultformtitle">Gender: </label>
+        <select class="form-control resultspg genderPref" id="gender">
+            <option value="Male" Select>Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Transgender">Transgender</option>
+            <option value="Other">Other</option>
         </select>
 
-        <label for="ageMin"> Minimum Age: </label>
-        <select class="form-control resultspg" id="ageMin ageMinRslt">
+        <label for="ageMin" class="resultformtitle"> Minimum Age: </label>
+        <select class="form-control resultspg agePrefMin" id="ageMin">
             <option selected>Min. Age:</option>
-            <option>18</option>
-            <option>19</option>
-            <option>20</option>
-            <option>21</option>
-            <option>22</option>
-            <option>25</option>
-            <option>26</option>
-            <option>27</option>
-            <option>28</option>
-            <option>29</option>
-            <option>30</option>
-            <option>31</option>
-            <option>32</option>
-            <option>33</option>
-            <option>34</option>
-            <option>35</option>
-            <option>36</option>
-            <option>37</option>
-            <option>38</option>
-            <option>39</option>
-            <option>40</option>
-            <option>41</option>
-            <option>42</option>
-            <option>43</option>
-            <option>44</option>
-            <option>45</option>
-            <option>46</option>
-            <option>47</option>
-            <option>48</option>
-            <option>49</option>
+            <option value="18">Min</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+            <option value="33">33</option>
+            <option value="34">34</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
         </select>
-        <label for="maxAge"> Minimum Age: </label>
-        <select class="form-control resultspg" id="ageMax ageMaxRslt">
+        <label for="maxAge" class="resultformtitle"> Maximum Age: </label>
+        <select class="form-control resultspg agePrefMax" id="ageMax">
             <option selected>Max. Age:</option>
-            <option>18</option>
-            <option>19</option>
-            <option>20</option>
-            <option>21</option>
-            <option>22</option>
-            <option>25</option>
-            <option>26</option>
-            <option>27</option>
-            <option>28</option>
-            <option>29</option>
-            <option>30</option>
-            <option>31</option>
-            <option>32</option>
-            <option>33</option>
-            <option>34</option>
-            <option>35</option>
-            <option>36</option>
-            <option>37</option>
-            <option>38</option>
-            <option>39</option>
-            <option>40</option>
-            <option>41</option>
-            <option>42</option>
-            <option>43</option>
-            <option>44</option>
-            <option>45</option>
-            <option>46</option>
-            <option>47</option>
-            <option>48</option>
-            <option>49</option>
+            <option value="100">Max</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+            <option value="33">33</option>
+            <option value="34">34</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
+            <option value="46">46</option>
+            <option value="47">47</option>
+            <option value="48">48</option>
+            <option value="49">49</option>
+            <option value="50">50</option>
         </select>
-        <label for="location">Location</label>
-        <select class="form-control resultspg" id="location locationRslt">
+        <label for="location" class="resultformtitle">Location</label>
+        <select class="form-control resultspg locationPref" id="location">
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>
@@ -135,64 +138,64 @@
             <option value="WI">Wisconsin</option>
             <option value="WY">Wyoming</option>
         </select>
-        <label for="heightFtMin heightInchMin ">Min Height:</label>
-        <select class="form-control resultspg" id="heightFtMin heightFtMinRslt">
-            <option selected>Min. (Ft)</option>
-            <option data-value="4">4'</option>
-            <option data-value="5">5'</option>
-            <option data-value="6">6'</option>
-            <option data-value="7">7'</option>
+        <label for="heightFtMin heightInchMin " class="resultformtitle">Min Height:</label>
+        <select class="form-control resultspg heightPrefMinFt" id="heightFtMin">
+            <option selected value="4">Min. (Ft)</option>
+            <option value="4">4'</option>
+            <option value="5">5'</option>
+            <option value="6">6'</option>
+            <option value="7">7'</option>
         </select>
-        <select class="form-control resultspg" id="heightInchMin heightInchMinRslt">
-            <option data-value="0" selected>Min. (Inch)</option>
-            <option data-value="0">0''</option>
-            <option data-value="1">1''</option>
-            <option data-value="2">2''</option>
-            <option data-value="3">3''</option>
-            <option data-value="4">4''</option>
-            <option data-value="5">5''</option>
-            <option data-value="6">6''</option>
-            <option data-value="7">7''</option>
-            <option data-value="8">8''</option>
-            <option data-value="9">9''</option>
-            <option data-value="10">10''</option>
-            <option data-value="11">11''</option>
-        </select>
-
-        <label for="heightFtMax heightInchMax ">Max Height:</label>
-        <select class="form-control resultspg" id="heightFtMax heightFtMaxRslt">
-            <option selected>Max. (Ft)</option>
-            <option data-value="4">4'</option>
-            <option data-value="5">5'</option>
-            <option data-value="6">6'</option>
-            <option data-value="7">7'</option>
-        </select>
-        <select class="form-control resultspg" id="heightInchMax heightInchMaxRslt">
-            <option data-value="0" selected>Max. (Inch)</option>
-            <option data-value="0">0''</option>
-            <option data-value="1">1''</option>
-            <option data-value="2">2''</option>
-            <option data-value="3">3''</option>
-            <option data-value="4">4''</option>
-            <option data-value="5">5''</option>
-            <option data-value="6">6''</option>
-            <option data-value="7">7''</option>
-            <option data-value="8">8''</option>
-            <option data-value="9">9''</option>
-            <option data-value="10">10''</option>
-            <option data-value="11">11''</option>
+        <select class="form-control resultspg heightPrefMinInch" id="heightInchMin">
+            <option value="0" selected>Min. (Inch)</option>
+            <option value="0">0''</option>
+            <option value="1">1''</option>
+            <option value="2">2''</option>
+            <option value="3">3''</option>
+            <option value="4">4''</option>
+            <option value="5">5''</option>
+            <option value="6">6''</option>
+            <option value="7">7''</option>
+            <option value="8">8''</option>
+            <option value="9">9''</option>
+            <option value="10">10''</option>
+            <option value="11">11''</option>
         </select>
 
-        <label for="Drink">Drink Frequency</label>
-        <select class="form alcoholInput form-control resultspg" id="alcoholsearch alcoholsearchRslt">
-            <option selected>Select Frequency</option>
-            <option value="never">Never</option>
-            <option value="occasionally">Occasionally</option>
-            <option value="socially">Socially</option>
-            <option value="all_day_everyday">All Day Everyday</option>
+        <label for="heightFtMax heightInchMax " class="resultformtitle">Max Height:</label>
+        <select class="form-control resultspg heightPrefMaxFt" id="heightFtMax">
+            <option selected value="4">Max. (Ft)</option>
+            <option value="4">4'</option>
+            <option value="5">5'</option>
+            <option value="6">6'</option>
+            <option value="7">7'</option>
+        </select>
+        <select class="form-control resultspg heightPrefMaxInch" id="heightInchMax">
+            <option value="11" selected>Max. (Inch)</option>
+            <option value="0">0''</option>
+            <option value="1">1''</option>
+            <option value="2">2''</option>
+            <option value="3">3''</option>
+            <option value="4">4''</option>
+            <option value="5">5''</option>
+            <option value="6">6''</option>
+            <option value="7">7''</option>
+            <option value="8">8''</option>
+            <option value="9">9''</option>
+            <option value="10">10''</option>
+            <option value="11">11''</option>
         </select>
 
-        <button type="submit" class="btn btn-primary mb-2 " id="submit-button">CLICK</button>
+        <label for="alcoholsearch" class="resultformtitle">Drink Frequency</label>
+        <select class="form alcoholInput form-control resultspg alcoholPref" id="alcoholsearch">
+            <option value="Socially" select>Select</option>
+            <option value="Never">Never</option>
+            <option value="Ocasionally">Occasionally</option>
+            <option value="Socially">Socially</option>
+            <option value="All_Day_Everyday">All Day Everyday</option>
+        </select>
+
+        <button type="submit" class="btn btn-primary mb-2 " id="sbmt-btn-results-pg">CLICK</button>
     </form>
 </div>
 
