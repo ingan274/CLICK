@@ -1,0 +1,43 @@
+11,Chris Andersen,TheBirdman,male,women,41,Los Angeles,white,6,10,Cancer,false,NBA,former player,dive bars,basketball,concerts,hiking
+12,Luka Doncic,LukaSwish,male,women,20,Dallas,white,6,7,Pisces,false,NBA,current player,basketball,fine-dining,traveling,politics
+13,Nikola Vucevic,NikoTheBaller,male,women,28,Orlando,white,7,0,Scorpio,false,NBA,current player,basketball,fine-dining,philantropy,news-current events
+14,Kevin Love,CavKev,male,women,31,Cleveland,white,6,10,Virgo,false,NBA,current player,philantropy,basketball,politics,fishing,hiking
+15,Lebron James,BronBron,male,women,34,Los Angeles,black,6,8,Capricorn,true,NBA,current player,philantropy,politics,basketball,fine-dining,gym workouts
+16,Kevin Durant,Durantula,male,women,30,New York,black,6,9,Libra,false,NBA,current player,philantropy,basketball,fine-dining,traveling
+17,Klay Thompson,BeigeSniper,male,women,29,Bay-Area,mixed,6,7,Aquarius,false,NBA,current player,basketball,news-current events,hiking,traveling
+18,James Harden,MrShootalot,male,women,30,Houston,black,6,5,Virgo,false,NBA,current player,basketball,fine-dining,strip clubs,gym workouts
+27,Tom Brady,BradyGoatQB,male,women,42,Boston,white,6,4,Leo,true,NFL,current player,fine-dining,football,traveling,concerts
+28,Ben Roethlisberger,BigBen,male,women,37,Pittsburg,white,6,5,Pisces,true,NFL,current player,football,philantropy,fishing,hunting
+29,Peyton Manning,MississippiSlinger,male,women,43,Nashville,white,6,5,Aries,true,NFL,former player,football,new-current events,concerts,traveling
+30,Jared Goff,LA-Jared,male,women,24,Los Angeles,white,6,4,Libra,false,NFL,current player,football,art-connoisseur,fine-dining,fishing,golf
+31,Sean McVay,CoachMcVay,male,women,33,Los Angeles,white,5,10,Aquarius,false,NFL,current coach,football,fine-dining,traveling,news-current events
+32,Antonio Brown,Number1WR,male,women,31,Miami,black,5,10,Cancer,false,NFL,former player,football,strip clubs,concerts,dive bars
+33,Ezekiel Elliot,MrFranchise,male,women,24,Dallas,black,6,0,Leo,false,NFL,current player,football,concerts,traveling,fine-dining
+34,Todd Gurley,ZigAndZagMan,male,women,25,Los Angeles,black,6,1,Leo,false,NFL,current player,fine-dining,fishing,football,traveling
+35,Aaron Donald,RomanticLineman,male,women,28,Los Angeles,black,6,1,Gemini,false,NFL,current player,football,traveling,concerts,gym-workouts,hiking
+36,Brandin Cooks,QuickFootedRomeo,male,women,26,Los Angeles,black,5,10,Libra,false,NFL,current player,football,concerts,traveling,fine-dining
+37,Yao Ming,ManInTheMiddle,male,women,39,Houston,asian,7,6,Virgo,true,NBA,traveling,fishing,basketball,philantropy,politics
+38,Jeremy Lin,MrLeftDribble,male,women,31,Los Angeles,6,3,Virgo,false,NBA,traveling,concerts,news-current events,basketball,christianity
+39,Jeff Bezos,MrAmazon,male,women,55,New York,5,10,Capricorn,false,tech,CEO of Amazon,philantropy,fine-dining,traveling,baseball,news-current events
+8,Kobe Bryant,Kobe5Rings,male,women,41,Los Angeles,black,6,6,Virgo,true,NBA,former player,coaching youth sports,basketball,fine-dining,traveling
+9,Phil Jackson,Mr11Rings,male,women,74,Los Angeles,white,6,8,Virgo,false,NBA,former coach and player,meditation,basketball,fishing,politics
+10,Kristaps Porzingis,Porzigod,male,women,24,Dallas,white,7,3,Leo,false,NBA,current player,dive bars,basketball,concerts,traveling
+
+23,Karen,Dolva,female,29,London,white,5,3,Virgo,Cofounder,No Isolation,fine-dining,soccer,politics,philantropy,meditation
+24,Anne-Marie,Imafidon,female,30,London,black,5,4,Taurus,Cofounder,Stemettes,politics,christianity,concerts,novel-reading,news-current events
+25,Morgan,DeBaun,female,29,Los Angeles,black,5,8,Aquarius,EVP and Cofounder,Blavity,politics,philantropy,amusement-parks,traveling,hiking
+26,Rachel,Haurwitz,female,34,Bay-area,white,5,4,Virgo,CEO,Caribou Biosciences,fine-dining,novel-reading,horseback-riding,traveling,hiking
+27,Rana,el Kaliouby,female,41,Bay-area,arab,5,5,Libra,CEO,Affectiva,fine-dining,politics,traveling,philantropy,meditation
+28,Werner,Vogels,male,60,Seattle,white,5,10,Libra,CTO,Amazon,fine-dining,horseback riding,philantropy,soccer,traveling
+29,Jack,Ma,55,male,New York,asian,5,7,Virgo,Cofounder and Chairman,Alibaba,philantropy,baseball,news-current events,meditation,fine-dining
+30,Demis,Hassabis,male,London,mixed,5,9,Leo,CEO,Deep Mind,soccer,traveling,novel-reading,concerts,art-connoisseur
+31,Jon,Skeet,male,45,Seattle,white,5,11,Aries,tech-lead,Google,football,basketball,concerts,politics,hiking
+32,Jeff,Dean,male,51,Seattle,white,6,1,Taurus,EVP,Google,basketball,camping,traveling,boating,hiking
+33,Dan,Abramov,male,35,Bay-Area,white,6,2,Capricorn,Software Engineer,Facebook,traveling,soccer,basketball,politics,news-current events
+34,Bill,Gates,male,63,Seattle,white,6,0,Scorpio,Cofounder and Board Member,Microsoft,philantropy,meditation,new-current events,traveling,basketball
+35,Linus,Torvalds,male,49,Seattle,white,5,10,Sagitarrius,Cofounder,Linux,soccer,philantropy,concerts,traveling,boating
+36,Sundar,Pichai,male,47,Seattle,indian,6,2,Gemini,CEO,Google,traveling,meditation,horseback riding,soccer,fine-dining
+37,Satya,Nadella,male,52,Seattle,indian,5,8,Leo,CEO,Microsoft,fine-dining,news-current events,traveling,concerts,baseball
+38,Evan,Yue,male,36,Los Angeles,asian,5,9,Pisces,Founder,Vue.js,basketball,politics,traveling,concerts,hiking
+39,Richard,Stallman,male,66,Boston,white,5,10,Pisces,Founder,Free Software Foundation,politics,activism,concerts,hiking,philantropy
+40,Andrew,Ng,male,43,Bay-Area,asian,5,9,Aries,CEO,Landing AI,philantropy,fine-dining,basketball,traveling,museums
