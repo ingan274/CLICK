@@ -59,9 +59,9 @@ module.exports = function (app) {
       }
     }).then(function (result) {
       console.log("\ntrivia taken value : " + result.dataValues.trivia_taken + "\n");
-      if (result.dataValues.trivia_taken === false) {
+      if (!result.dataValues.trivia_taken) {
         res.redirect("/trivia");
-      } else if (result.dataValues.trivia_taken === true) {
+      } else if (result.dataValues.trivia_taken) {
         db.Tech.findOne({
           where: {
             userid: req.session.passport.user,
