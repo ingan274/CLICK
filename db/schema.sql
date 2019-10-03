@@ -9,11 +9,12 @@ CREATE TABLE `Matches` (
   `gender` varchar(50) NOT NULL,
   `age` int(11) NOT NULL,
   `city` varchar(100) NOT NULL,
+  `state` varchar(100),
   `ethnicity` varchar(100),
   `height-feet` int(1) NOT NULL,
   `height-inches` int(1) NOT NULL,
   `zodiac` varchar(20),
-  `job_position` varchar(100) NOT NULL,
+  `job` varchar(100) NOT NULL,
   `company` varchar(100) NOT NULL,
   `interest1` varchar(300),
   `interest2` varchar(300),
@@ -21,6 +22,8 @@ CREATE TABLE `Matches` (
   `interest4` varchar(300),
   `interest5` varchar(300),
   `description` varchar(3000),
-  `imageurl` varchar(300)
+  `imageurl` varchar(300),
+  `imageurl2` varchar(300),
+  `imageurl3` varchar(300)
   PRIMARY KEY (`id`)
 ) 
