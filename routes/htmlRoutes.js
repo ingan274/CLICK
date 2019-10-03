@@ -88,15 +88,102 @@ module.exports = function (app) {
   //renders all results without filters
   //gotta do a minus or except query
   app.get("/matches", function (req, res) {
-    db.Tech.findAll({
+
+    var ageMin = parseInt(req.query.minA);
+    var ageMax = parseInt(req.query.maxA);
+    var heightMinFt = parseInt(req.query.minH);
+    var heightMaxFt = parseInt(req.query.maxH);
+    var heightMinInch = parseInt(req.query.minHI);
+    var heightMaxInch = parseInt(req.query.maxHI);
+
+    var search = {
       where: {
-      userid: {
-        [Op.ne]: req.session.passport.user
+        userid: {
+          [Op.ne]: req.session.passport.user
+        }
       }
-      }
-    }).then(function (results) {
+    }
+    if (req.query.gender) {
+      search.where.gender = req.query.gender
+    }
+
+    if (req.query.drinks) {
+      search.where.drinks = req.query.drinks
+    }
+
+    if (req.query.location) {
+      search.where.state = req.query.location
+    }
+
+    if (ageMin && !ageMax) {
+      search.where.age = { [Op.gte]: ageMin}
+    }
+
+    if (!ageMin && ageMax) {
+      search.where.age = { [Op.lte]: ageMax}
+    }
+
+    if (ageMin && ageMax) {
+      search.where.age = { [Op.between]: [ageMin, ageMax]}
+    }
+
+    if (heightMinFt && !heightMaxFt) {
+      search.where.heightfeet = { [Op.gte]: heightMinFt}
+    }
+
+    if (!heightMinFt && heightMaxFt) {
+      search.where.heightfeet = { [Op.lte]: heightMaxFt}
+    }
+
+    if (heightMinFt && heightMaxFt) {
+      search.where.heightfeet = { [Op.between]: [heightMinFt, heightMaxFt]}
+    }
+
+
+    if (heightMinInch && !heightMaxInch) {
+      search.where.heightinches = { [Op.gte]: heightMinInch}
+    }
+
+    if (!heightMinInch && heightMaxInch) {
+      search.where.heightinches = { [Op.lte]: heightMaxInch}
+    }
+
+    if (heightMinInch && heightMaxInch) {
+      search.where.heightinches = { [Op.between]: [heightMinInch, heightMaxInch]}
+    }
+
+    db.Tech.findAll(
+      search
+    ).then(function (results) {
       res.render("results-page", { results: results });
     })
+  });
+
+  //get routes to filter with preferences and renders to results page 
+  app.get("/matchesmore", function (req, res) {
+
+
+
+    db.Tech.findAll({
+      where: {
+
+      
+        heightfeet: {
+          [Op.between]: [heightMinFt, heightMaxFt],
+        },
+        heightinches: {
+          [Op.between]: [heightMinInch, heightMaxInch],
+        },
+
+      }
+    }).then(function (result) {
+      // console.log(result);
+      // res.json(result)
+      res.render("results-page", { results: result })
+    }).catch(function (err) {
+      console.log(err)
+      res.sendStatus(505)
+    });
   });
 
   //renders individual results 

@@ -50,36 +50,6 @@ module.exports = function (app) {
     });
   });
 
-  //get routes to filter with preferences and renders to results page 
-  app.post("/api/matches/preferred", function (req, res) {
-    var ageMin = parseInt(req.body.minA);
-    var ageMax = parseInt(req.body.maxA);
-    var heightMinFt = parseInt(req.body.minH);
-    var heightMaxFt = parseInt(req.body.maxH);
-    var heightMinInch = parseInt(req.body.minHI);
-    var heightMaxInch = parseInt(req.body.maxHI);
-
-    // db.Tech.findAll({
-    //   where: {
-    //     gender: req.body.gender,
-    //     // age: {
-    //     //   [Op.between]: [ageMin, ageMax],
-    //     // },
-    //     // heightfeet: {
-    //     //   [Op.between]: [heightMinFt, heightMaxFt],
-    //     // },
-    //     // heightinches: {
-    //     //   [Op.between]: [heightMinInch, heightMinInch],
-    //     // },
-    //     // drinks: req.body.alcohol,
-    //     // state: req.body.state
-    //   }
-    //   }).then(function (result) {
-    //     // console.log(result);
-    //     res.json(result)
-    //     // res.render("results-page", { results: result })
-    //   });
-  });
 
   //updates the user table for trivia taken to true 
   app.put("/api/matches", function (req, res) {
