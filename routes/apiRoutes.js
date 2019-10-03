@@ -44,12 +44,8 @@ module.exports = function (app) {
     }).then(function (newuser) {
       console.log("posted New User");
       res.json(newuser);
-    }).catch(function (err) {
-      console.log(err)
-      res.sendStatus(500);
-    });
-  });
-
+    })
+  })
 
   //updates the user table for trivia taken to true 
   app.put("/api/matches", function (req, res) {

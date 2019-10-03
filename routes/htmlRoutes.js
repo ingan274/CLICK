@@ -51,7 +51,7 @@ module.exports = function (app) {
 
   //renders my-profile page with the data of user logged in 
   app.get("/my-profile", function (req, res) {
-    console.log("\nreq.session.passport.user (id)" + req.session.passport.user + "\n");
+    console.log("\nreq.session.passport.user (id) " + req.session.passport.user + "\n");
     var userId = req.session.passport.user;
     db.user.findOne({
       where: {
@@ -67,10 +67,16 @@ module.exports = function (app) {
             userid: req.session.passport.user,
           }
         }).then(function (profile) {
-          // console.log(profile)
+          console.log(profile)
           res.render('profile-page', profile)
+        }).catch(function(err) {
+          console.log(err)
+          res.sendStatus(500)
         })
       }
+    }).catch(function(err) {
+      console.log(err)
+      res.sendStatus(500)
     })
   });
 
