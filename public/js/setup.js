@@ -24,7 +24,7 @@ $(document).ready(function () {
     var description = $('.shortDescInput').val().trim()
     var imageurl;
 
-    if ($('.imageurl').val().trim().length < 0) {
+    if ($('.imageurl').val().trim().length > 0) {
       imageurl = $('.imageurl').val().trim()
     } else {
       imageurl = "/imgs/no-image-image.png"
