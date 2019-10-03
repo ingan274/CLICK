@@ -47,8 +47,8 @@ module.exports = function (app) {
     })
   })
 
-    //updates the user table for trivia taken to true 
-    app.put("/api/matches", function (req, res) {
+  //updates the user table for trivia taken to true 
+  app.put("/api/matches", function (req, res) {
     db.Tech.update(
       res.body.data
       , {
