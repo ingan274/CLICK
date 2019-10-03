@@ -68,7 +68,7 @@ module.exports = function (app) {
           }
         }).then(function (profile) {
           // console.log(profile)
-          res.render('results-page', profile)
+          res.render('profile-page', profile)
         })
       }
     })
