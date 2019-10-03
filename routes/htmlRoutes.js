@@ -67,7 +67,7 @@ module.exports = function (app) {
             userid: req.session.passport.user,
           }
         }).then(function (profile) {
-          // console.log(profile)
+          console.log(profile)
           res.render('profile-page', profile)
         }).catch(function(err) {
           console.log(err)
