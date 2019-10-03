@@ -22,9 +22,6 @@ module.exports = function (app) {
   //renders the trivia page
   app.get("/trivia", function (req, res) {
     res.render("initial-quiz", ({ layout: "initial.handlebars" }));
-  }).catch(function(err) {
-    console.log(err)
-    res.sendStatus(500)
   })
 
   //renders the about page
