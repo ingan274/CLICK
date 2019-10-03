@@ -87,11 +87,13 @@ $(document).ready(function () {
       state: state
     }
     // console.log(matches)
-
-    $.get("api/matches/preferred", matches, function(results) {
-      console.log(results)
-      location.href = '/matches'
-    })
+    $.ajax({
+      url: "api/matches/preferred",
+      type: 'post',
+      data: matches
+    }).then(function () {
+      location.href = "/matches";
+    });
 
   })
 })
