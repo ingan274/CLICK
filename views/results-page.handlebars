@@ -5,8 +5,8 @@
 <div class="container formDivResults">
     <form class="form-inline">
         <label for="gender" class="resultformtitle">Gender: </label>
-        <select class="form-control resultspg genderPref" id="gender">
-            <option value="Male" Select>Select</option>
+        <select class="form-control resultspg genderPref" id="gender" name="gender">
+            <option value="">Select</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Transgender">Transgender</option>
@@ -14,9 +14,8 @@
         </select>
 
         <label for="ageMin" class="resultformtitle"> Minimum Age: </label>
-        <select class="form-control resultspg agePrefMin" id="ageMin">
-            <option selected>Min. Age:</option>
-            <option value="18">Min</option>
+        <select class="form-control resultspg agePrefMin" id="ageMin" name="minA">
+            <option value="">Min. Age:</option>
             <option value="18">18</option>
             <option value="19">19</option>
             <option value="20">20</option>
@@ -47,9 +46,8 @@
             <option value="45">45</option>
         </select>
         <label for="maxAge" class="resultformtitle"> Maximum Age: </label>
-        <select class="form-control resultspg agePrefMax" id="ageMax">
-            <option selected>Max. Age:</option>
-            <option value="100">Max</option>
+        <select class="form-control resultspg agePrefMax" id="ageMax" name="maxA">
+            <option value="">Max. Age</option>
             <option value="18">18</option>
             <option value="19">19</option>
             <option value="20">20</option>
@@ -85,7 +83,8 @@
             <option value="50">50</option>
         </select>
         <label for="location" class="resultformtitle">Location</label>
-        <select class="form-control resultspg locationPref" id="location">
+        <select class="form-control resultspg locationPref" id="location" name="location">
+            <option value="" select>Select</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>
@@ -139,15 +138,15 @@
             <option value="WY">Wyoming</option>
         </select>
         <label for="heightFtMin heightInchMin " class="resultformtitle">Min Height:</label>
-        <select class="form-control resultspg heightPrefMinFt" id="heightFtMin">
-            <option selected value="4">Min. (Ft)</option>
+        <select class="form-control resultspg heightPrefMinFt" id="heightFtMin" name="minH">
+            <option value="" selected >Min. (Ft)</option>
             <option value="4">4'</option>
             <option value="5">5'</option>
             <option value="6">6'</option>
             <option value="7">7'</option>
         </select>
-        <select class="form-control resultspg heightPrefMinInch" id="heightInchMin">
-            <option value="0" selected>Min. (Inch)</option>
+        <select class="form-control resultspg heightPrefMinInch" id="heightInchMin" name="minHI">
+            <option value="" selected>Min. (Inch)</option>
             <option value="0">0''</option>
             <option value="1">1''</option>
             <option value="2">2''</option>
@@ -163,15 +162,15 @@
         </select>
 
         <label for="heightFtMax heightInchMax " class="resultformtitle">Max Height:</label>
-        <select class="form-control resultspg heightPrefMaxFt" id="heightFtMax">
-            <option selected value="4">Max. (Ft)</option>
+        <select class="form-control resultspg heightPrefMaxFt" id="heightFtMax" name="maxH">
+            <option value="" selected>Max. (Ft)</option>
             <option value="4">4'</option>
             <option value="5">5'</option>
             <option value="6">6'</option>
             <option value="7">7'</option>
         </select>
-        <select class="form-control resultspg heightPrefMaxInch" id="heightInchMax">
-            <option value="11" selected>Max. (Inch)</option>
+        <select class="form-control resultspg heightPrefMaxInch" id="heightInchMax" name="maxHI">
+            <option  value="" selected>Max. (Inch)</option>
             <option value="0">0''</option>
             <option value="1">1''</option>
             <option value="2">2''</option>
@@ -187,8 +186,8 @@
         </select>
 
         <label for="alcoholsearch" class="resultformtitle">Drink Frequency</label>
-        <select class="form alcoholInput form-control resultspg alcoholPref" id="alcoholsearch">
-            <option value="Socially" select>Select</option>
+        <select class="form alcoholInput form-control resultspg alcoholPref" id="alcoholsearch" name="drinks">
+            <option value="">Select</option>
             <option value="Never">Never</option>
             <option value="Ocasionally">Occasionally</option>
             <option value="Socially">Socially</option>
