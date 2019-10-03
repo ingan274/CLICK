@@ -22,6 +22,9 @@ module.exports = function (app) {
   //renders the trivia page
   app.get("/trivia", function (req, res) {
     res.render("initial-quiz", ({ layout: "initial.handlebars" }));
+  }).catch(function(err) {
+    console.log(err)
+    res.sendStatus(500)
   })
 
   //renders the about page
@@ -51,7 +54,7 @@ module.exports = function (app) {
 
   //renders my-profile page with the data of user logged in 
   app.get("/my-profile", function (req, res) {
-    console.log("\nreq.session.passport.user (id)" + req.session.passport.user + "\n");
+    console.log("\nreq.session.passport.user (id) " + req.session.passport.user + "\n");
     var userId = req.session.passport.user;
     db.user.findOne({
       where: {
@@ -74,6 +77,9 @@ module.exports = function (app) {
           res.sendStatus(500)
         })
       }
+    }).catch(function(err) {
+      console.log(err)
+      res.sendStatus(500)
     })
   });
 
