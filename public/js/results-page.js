@@ -26,8 +26,12 @@ $(document).ready(function () {
     }
     
     // console.log(matches);
-    $.get("api/matches/preferred", matches, function(results) {
-      console.log(results)
-    })
+    $.ajax({
+      url: "api/matches/preferred",
+      type: 'post',
+      data: matches
+    }).then(function () {
+      location.href = "/matches";
+    });
   })
 });
