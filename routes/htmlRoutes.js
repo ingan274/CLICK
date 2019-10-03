@@ -69,6 +69,9 @@ module.exports = function (app) {
         }).then(function (profile) {
           // console.log(profile)
           res.render('profile-page', profile)
+        }).catch(function(err) {
+          console.log(err)
+          res.sendStatus(500)
         })
       }
     })
