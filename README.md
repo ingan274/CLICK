@@ -13,7 +13,7 @@ Find love here: https://click-project.herokuapp.com/
 
 ## User Journey
 <br>
-<img src="https://gph.is/2fSUvEx">
+<img src="https://media.giphy.com/media/l2YWrQN9K6XqZEBm8/giphy.gif">
 <br>
 1. User will log in or sign up to CLICK
 2. They will take a preliminary quiz of their knowledge
