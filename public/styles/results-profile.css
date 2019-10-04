@@ -23,7 +23,7 @@
 }
 
 .profileImage {
-  height: 570px;
+  width: 100%;
 }
 
 .matchInfo, .myinfo {
