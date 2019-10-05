@@ -8,7 +8,7 @@ $(document).ready(function () {
         var q3 = $(".qa3").val();
         var q4 = $(".qa4").val();
 
-        if (q1 === 'qa1a' && q2 === 'qa2b'  && q3 === 'qa3a'  && q4 === 'qa4a') {
+        if (q1 === 'qa1c' && q2 === 'qa2b'  && q3 === 'qa3b'  && q4 === 'qa4a') {
             location.href = '/profile-setup';
             $.ajax({
                 url: "/api/trivia-taken",
