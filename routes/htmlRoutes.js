@@ -86,8 +86,7 @@ module.exports = function (app) {
     })
   });
 
-  //renders all results without filters
-  //gotta do a minus or except query
+  //renders all results with filters
   app.get("/matches", function (req, res) {
 
     var ageMin = parseInt(req.query.minA);
@@ -163,12 +162,9 @@ module.exports = function (app) {
   //get routes to filter with preferences and renders to results page 
   app.get("/matchesmore", function (req, res) {
 
-
-
     db.Tech.findAll({
       where: {
 
-      
         heightfeet: {
           [Op.between]: [heightMinFt, heightMaxFt],
         },

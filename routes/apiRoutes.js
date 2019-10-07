@@ -47,7 +47,7 @@ module.exports = function (app) {
     })
   })
 
-  //updates the user table for trivia taken to true 
+  // gets all possible matches from db exept the user  
   app.put("/api/matches", function (req, res) {
     db.Tech.update(
       res.body.data
@@ -83,7 +83,7 @@ module.exports = function (app) {
   });
 
 
-  //updates the user table for trivia taken to true 
+  // updates the user table for trivia taken to true 
   app.put("/api/trivia-taken", function (req, res) {
     db.user.update({
       trivia_taken: true
@@ -97,17 +97,5 @@ module.exports = function (app) {
       console.log(err)
     });
   });
-
-  // app.get("/api/authdata", function (req, res) {
-  //   db.user.findAll({
-  //     where: {
-  //       id: req.session.passport.user
-  //     }
-  //   }).then(function (result) {
-  //     res.json(result);
-  //     console.log(req.session.passport)
-  //     console.log(result[0].dataValues)
-  //   });
-  // });
 
 };
