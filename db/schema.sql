@@ -1,5 +1,3 @@
-DROP DATABASE IF EXISTS click_db;
-CREATE database click_db;
 
 USE click_db;
 CREATE TABLE `Matches` (
@@ -21,9 +19,9 @@ CREATE TABLE `Matches` (
   `interest3` varchar(300),
   `interest4` varchar(300),
   `interest5` varchar(300),
-  `description` varchar(3000),
+  `description` varchar(5000),
   `imageurl` varchar(300),
   `imageurl2` varchar(300),
-  `imageurl3` varchar(300)
+  `imageurl3` varchar(300),
   PRIMARY KEY (`id`)
 ) 
