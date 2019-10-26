@@ -3,7 +3,7 @@ $(document).ready(function () {
     $(".initial-quiz-submit").on("click", (event) => {
         event.preventDefault()
         var q1 = $(".qa1").val();
-        console.log(q1)
+        // console.log(q1)
         var q2 = $(".qa2").val();
         var q3 = $(".qa3").val();
         var q4 = $(".qa4").val();
